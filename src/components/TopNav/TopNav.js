@@ -152,22 +152,27 @@ const TopNav = () => {
               direction="row"
               sx={{ color: "action.active" }}
             >
-              <Badge
-                badgeContent={0}
-                showZero
-                className={classes.Badge}
-                max={99}
-              >
-                <FavoriteOutlinedIcon />
-              </Badge>
-              <Badge
-                badgeContent={0}
-                showZero
-                className={classes.Badge}
-                max={99}
-              >
-                <ShoppingCartOutlinedIcon />
-              </Badge>
+              <Link>
+                <Badge
+                  badgeContent={0}
+                  showZero
+                  className={classes.Badge}
+                  max={99}
+                >
+                  <FavoriteOutlinedIcon />
+                </Badge>
+              </Link>
+              
+              <Link>
+                <Badge
+                  badgeContent={0}
+                  showZero
+                  className={classes.Badge}
+                  max={99}
+                >
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+              </Link>
             </Stack>
             <Search />
           </Stack>
