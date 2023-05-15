@@ -1,6 +1,23 @@
-import { createTheme } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-const theme = createTheme({
+let theme = createTheme({
+    components:{
+        MuiContainer:{
+            styleOverrides:{
+                root:{
+                    padding:"0px !important" ,
+                    margin:"0px"
+                }
+            }
+        },
+        MuiIconButton:{
+            styleOverrides:{
+                root:{
+                    paddingRight:0
+                }
+            }
+        }
+    },
     palette:{
         primary:{
             dark: "#232C46", //Yankees Blue
@@ -16,7 +33,7 @@ const theme = createTheme({
     },
 
     typography:{
-        fontFamily:'Poppins',
+        fontFamily: ["Poppins", "sans-serif"].join(","),
         h1:{ 
             fontSize:"6rem",
             fontWeight:"700",
@@ -35,7 +52,7 @@ const theme = createTheme({
         },
         body:{
             fontSize:"1.25rem",
-            fontWeight:"400"
+            fontWeight:"400",
         },
         productText:{
             fontSize:"2rem",
@@ -52,6 +69,8 @@ const theme = createTheme({
             fontWeight:"700"
         },
     }
+    
 })
 
+theme=responsiveFontSizes(theme)
 export default theme
