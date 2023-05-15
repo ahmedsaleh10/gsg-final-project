@@ -14,9 +14,11 @@ import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import { Link, Stack } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Search from "./Search";
+import SearchIcon from "@mui/icons-material/Search";
 
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState("Home");
 
   const theme = useTheme();
@@ -54,11 +56,11 @@ const TopNav = () => {
       },
     },
     BurgerdIcon: {
+      color: theme.palette.primary.main,
       display: "none",
       [theme.breakpoints.down("md")]: {
         display: "inline-flex",
       },
-      maxWidth: "fit-content",
     },
     ActivePage: {
       marginRight: "2.5rem",
@@ -67,10 +69,19 @@ const TopNav = () => {
       textDecoration: "underline",
       fontWeight: 500,
     },
-    Menu: {
-      display: "none",
+    SearchField: {
+      display: "block",
       [theme.breakpoints.down("md")]: {
-        display: "block",
+        display: "none",
+      },
+    },
+    MenuItem: {
+      padding: 0,
+      "& .MuiList-root": {
+        padding: 0,
+        "&.MuiMenu-list": {
+          padding: 0,
+        },
       },
     },
   });
@@ -86,17 +97,24 @@ const TopNav = () => {
     setAnchorElNav(null);
   };
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar className={classes.AppBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters className={classes.Toolbar}>
-          <Stack className={classes.BurgerdIcon}>
+          <Stack>
             <IconButton
               size="large"
               aria-controls="menu-appbar"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon />
+              <MenuIcon className={classes.BurgerdIcon} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -112,7 +130,7 @@ const TopNav = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              className={classes.Menu}
+              className={classes.BurgerdIcon}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -147,11 +165,7 @@ const TopNav = () => {
             ))}
           </Stack>
           <Stack direction={"row"} alignItems={"center"} spacing={3}>
-            <Stack
-              spacing={2.5}
-              direction="row"
-              sx={{ color: "action.active" }}
-            >
+            <Stack spacing={2.5} direction="row">
               <Link>
                 <Badge
                   badgeContent={0}
@@ -162,7 +176,6 @@ const TopNav = () => {
                   <FavoriteOutlinedIcon />
                 </Badge>
               </Link>
-              
               <Link>
                 <Badge
                   badgeContent={0}
@@ -173,8 +186,27 @@ const TopNav = () => {
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </Link>
+              <Stack className={classes.BurgerdIcon}>
+                <IconButton onClick={handleClick}>
+                  <SearchIcon
+                    fontSize="large"
+                    className={classes.BurgerdIcon}
+                  />
+                </IconButton>
+              </Stack>
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem className={classes.MenuItem}>
+                  <Search />
+                </MenuItem>
+              </Menu>
             </Stack>
-            <Search />
+            <Stack className={classes.SearchField}>
+              <Search />
+            </Stack>
           </Stack>
         </Toolbar>
       </Container>
