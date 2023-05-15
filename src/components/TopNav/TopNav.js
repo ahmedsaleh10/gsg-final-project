@@ -1,4 +1,3 @@
-import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,7 +6,6 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import { createUseStyles } from "react-jss";
 import { useState } from "react";
 import Badge from "@mui/material/Badge";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
@@ -15,77 +13,14 @@ import { Link, Stack } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Search from "./Search";
 import SearchIcon from "@mui/icons-material/Search";
+import useStyles from "./Styles";
 
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState("Home");
 
-  const theme = useTheme();
-  const styles = createUseStyles({
-    AppBar: {
-      position: "static",
-      backgroundColor: "white",
-      padding: "0rem 8rem",
-      [theme.breakpoints.down("lg")]: {
-        padding: "0rem",
-      },
-      boxShadow: "none",
-    },
-    Pages: {
-      marginRight: "2.5rem",
-      color: "gray",
-      fontFamily: theme.typography.fontFamily,
-      textDecoration: "none",
-    },
-    Toolbar: {
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    Badge: {
-      "& .MuiBadge-badge": {
-        right: -3,
-        top: 21,
-        border: `2px solid ${theme.palette.background.paper}`,
-        padding: "0 4px",
-        backgroundColor: "#ed3558",
-        color: "white",
-      },
-      "& .MuiSvgIcon-root": {
-        fontSize: "30px",
-      },
-    },
-    BurgerdIcon: {
-      color: theme.palette.primary.main,
-      display: "none",
-      [theme.breakpoints.down("md")]: {
-        display: "inline-flex",
-      },
-    },
-    ActivePage: {
-      marginRight: "2.5rem",
-      color: "gray",
-      fontFamily: theme.typography.fontFamily,
-      textDecoration: "underline",
-      fontWeight: 500,
-    },
-    SearchField: {
-      display: "block",
-      [theme.breakpoints.down("md")]: {
-        display: "none",
-      },
-    },
-    MenuItem: {
-      padding: 0,
-      "& .MuiList-root": {
-        padding: 0,
-        "&.MuiMenu-list": {
-          padding: 0,
-        },
-      },
-    },
-  });
-  const classes = styles();
+  const classes = useStyles();
 
   const pages = ["Home", "Mens", "Womens", "Kids", "Blogs"];
 
