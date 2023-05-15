@@ -16,7 +16,21 @@ let theme = createTheme({
                     paddingRight:0
                 }
             }
-        }
+        },
+        MuiButtonBase:{
+            styleOverrides:{
+                root:{
+                    padding:"0px",
+                }
+            }
+        },
+        MuiButton:{
+            styleOverrides:{
+                root:{
+                    padding:"0px"
+                }
+            }
+        },
     },
     palette:{
         primary:{
