@@ -13,7 +13,7 @@ let theme = createTheme({
         MuiIconButton:{
             styleOverrides:{
                 root:{
-                    paddingRight:0
+                    padding:0
                 }
             }
         },
