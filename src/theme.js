@@ -5,7 +5,10 @@ let theme = createTheme({
         MuiContainer:{
             styleOverrides:{
                 root:{
-                    padding:"0 !important" ,
+                    padding:"0 " ,
+                    '@media (min-width: 600px)': {
+                        padding:0
+                      },
                     margin:"0"
                 }
             }
