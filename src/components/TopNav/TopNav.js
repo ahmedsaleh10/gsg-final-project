@@ -14,6 +14,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Search from "./Search";
 import SearchIcon from "@mui/icons-material/Search";
 import useStyles from "./Styles";
+import { SearchMenu } from "./Styles";
 
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -129,7 +130,7 @@ const TopNav = () => {
                   />
                 </IconButton>
               </Stack>
-              <Menu
+              <SearchMenu
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
@@ -137,7 +138,7 @@ const TopNav = () => {
                 <MenuItem className={classes.MenuItem}>
                   <Search />
                 </MenuItem>
-              </Menu>
+              </SearchMenu>
             </Stack>
             <Stack className={classes.SearchField}>
               <Search />
