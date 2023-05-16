@@ -1,21 +1,24 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
-import Badge from "@mui/material/Badge";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
-import { Link, Stack } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Search from "./Search";
 import SearchIcon from "@mui/icons-material/Search";
 import useStyles from "./Styles";
 import { SearchMenu } from "./Styles";
-
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Menu,
+  Container,
+  MenuItem,
+  Badge,
+  Link,
+  Stack,
+  } from "@mui/material";
+  
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
