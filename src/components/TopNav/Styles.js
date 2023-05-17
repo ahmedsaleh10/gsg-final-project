@@ -1,7 +1,7 @@
 import theme from "../../theme";
 import { createUseStyles } from "react-jss";
 import InputBase from "@mui/material/InputBase";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { Box, Menu } from "@mui/material";
 
 const useStyles = createUseStyles({
