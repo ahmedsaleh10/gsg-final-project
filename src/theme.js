@@ -5,8 +5,11 @@ let theme = createTheme({
         MuiContainer:{
             styleOverrides:{
                 root:{
-                    padding:"0px !important" ,
-                    margin:"0px"
+                    padding:"0 " ,
+                    '@media (min-width: 600px)': {
+                        padding:0
+                      },
+                    margin:"0"
                 }
             }
         },
@@ -20,14 +23,14 @@ let theme = createTheme({
         MuiButtonBase:{
             styleOverrides:{
                 root:{
-                    padding:"0px",
+                    padding:"0",
                 }
             }
         },
         MuiButton:{
             styleOverrides:{
                 root:{
-                    padding:"0px"
+                    padding:"0"
                 }
             }
         },
@@ -43,6 +46,7 @@ let theme = createTheme({
             dark:"#ED843D", // Tiger's eye
             light:"#60636D", // Dark green text color
         },
+        text: "gray",
         
     },
 

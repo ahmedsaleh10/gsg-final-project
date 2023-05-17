@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     AppBar: {
       position: "static",
       backgroundColor: "white",
-      padding: "0rem 8rem",
+      padding: "0 8rem",
       [theme.breakpoints.down("lg")]: {
         padding: "0rem",
       },
@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
     },
     Pages: {
       marginRight: "2.5rem",
-      color: "gray",
+      color: `${theme.palette.text}`,
       fontFamily: theme.typography.fontFamily,
       textDecoration: "none",
     },
@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
         border: `2px solid ${theme.palette.background.paper}`,
         padding: "0 4px",
         backgroundColor: "#ed3558",
-        color: "white",
+        color: `${theme.palette.common.white}`,
       },
       "& .MuiSvgIcon-root": {
         fontSize: "30px",
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
     },
     ActivePage: {
       marginRight: "2.5rem",
-      color: "gray",
+      color: `${theme.palette.text}`,
       fontFamily:theme.typography.fontFamily,
       textDecoration: "underline",
       fontWeight: 500,
