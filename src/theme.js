@@ -7,7 +7,7 @@ let theme = createTheme({
                 root:{
                     padding:"0 " ,
                     '@media (min-width: 600px)': {
-                        padding:0
+                        padding:"0"
                       },
                     margin:"0"
                 }
@@ -16,7 +16,7 @@ let theme = createTheme({
         MuiIconButton:{
             styleOverrides:{
                 root:{
-                    padding:0
+                    padding:"0"
                 }
             }
         },
@@ -30,10 +30,28 @@ let theme = createTheme({
         MuiButton:{
             styleOverrides:{
                 root:{
-                    padding:"0"
+                    padding:"0",
                 }
             }
         },
+        MuiGrid:{
+            styleOverrides:{
+                root:{
+                    padding:"0",
+                    '&.MuiGrid-item':{
+                        padding:"0.5rem",
+                    }
+                }
+            }
+        },
+        MuiSvgIcon:{
+            styleOverrides:{
+                root:{
+                    fontSize:"2.5rem",
+                }
+            }
+        },
+
     },
     palette:{
         primary:{
@@ -46,7 +64,12 @@ let theme = createTheme({
             dark:"#ED843D", // Tiger's eye
             light:"#60636D", // Dark green text color
         },
-        text: "gray",
+        text: "#a6a6a6",
+        title:"#e3dede",
+        background:{
+            main:"#EEEEEE",// Card background
+            dark:"#27292C", // Footer background
+        }
         
     },
 
@@ -60,26 +83,28 @@ let theme = createTheme({
             fontSize:"5.5rem",
             fontWeight:"400"
         },
-        sectionTitle:{
+        subtitle1:{
+            //sectionTitle
             fontSize:"4rem",
             fontWeight:"700",
         },
-        subtitle1:{
+        subtitle2:{
             fontSize:"2.5rem",
             fontWeight:"700"
         },
-        body:{
-            fontSize:"1.25rem",
+        body1:{
+            //price+body
+            fontSize:"1.2rem",
             fontWeight:"400",
+            color:"#a6a6a6",
         },
-        productText:{
+        caption:{
+            //productText
             fontSize:"2rem",
             fontWeight:"700",
         },
-        price:{
-            fontSize:"1.25rem",
-        },
-        bigPrice:{
+        body2:{
+            //bigPrice
             fontSize:"2rem",
         },
         button:{
