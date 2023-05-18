@@ -99,6 +99,10 @@ const useStyles= createUseStyles({
         backgroundColor:`${theme.palette.primary.main}`,
         fontSize:"1.3rem",
         border:"none",
+        color:`${theme.palette.title}`,
+        [theme.breakpoints.down("md")]:{
+            padding:"1.2rem 1.2rem"
+        }
 
     },
     FooterHeader:{
