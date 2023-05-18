@@ -1,5 +1,35 @@
 import { createUseStyles } from "react-jss";
 import theme from "../../theme";
+import InputBase from "@mui/material/InputBase";
+import { styled } from "@mui/material/styles";
+
+export const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: `${theme.palette.text}`,
+    width:"100%",
+    "& .MuiInputBase-input": {
+      padding: theme.spacing(1, 1, 1, 0),
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create("width"),
+      width: "80%",
+    },
+  }));
+
+export const SearchField = styled("div")(({ theme }) => ({
+    position: "relative",
+    display:"flex",
+    borderRadius:"0",
+    backgroundColor:`${theme.palette.common.white}`,
+    "&:hover": {
+      backgroundColor: `${theme.palette.common.white}`,
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: "0.8rem",
+    width: "50%",
+    margin:"auto",
+    [theme.breakpoints.down("lg")]:{
+        width:"100%",
+    },
+  }));  
 
 const useStyles= createUseStyles({
     Image:{
@@ -23,7 +53,7 @@ const useStyles= createUseStyles({
     },
     Icons:{
         '& .MuiSvgIcon-root':{
-            color:"white",
+            color:`${theme.palette.common.white}`,
         }
     },
     Title:{
@@ -32,7 +62,7 @@ const useStyles= createUseStyles({
         marginBottom:"3.8rem",
     },
     Container:{
-        backgroundColor:`${theme.palette.background.dark}`,
+        paddingTop:"4rem",
     },
     Divider:{
         borderWidth:"0.1rem",
@@ -46,6 +76,35 @@ const useStyles= createUseStyles({
         [theme.breakpoints.down("sm")]:{
             flexDirection:"column",
             alignItems:"flex-start"
+        },
+    },
+    MainFooter:{
+        backgroundColor:`${theme.palette.background.dark}`,
+    },
+    HeaderTitle:{
+        color:`${theme.palette.title}`,
+        textAlign:'center',
+        lineHeight:"1.3",
+        '& span':{
+            display:"block",
+        },
+        padding:"3rem 0",
+        [theme.breakpoints.down("lg")]:{
+                width:"100%",
+                textAlign:"left"
+        },
+    },
+    SendButton:{
+        padding:"1.2rem 4rem",
+        backgroundColor:`${theme.palette.primary.main}`,
+        fontSize:"1.3rem",
+        border:"none",
+
+    },
+    FooterHeader:{
+        padding:"0 8rem",
+        [theme.breakpoints.down("lg")]:{
+            padding:"0rem 2rem",            
         },
     }
 })
