@@ -4,7 +4,7 @@ import InputBase from "@mui/material/InputBase";
 import { styled } from "@mui/material/styles";
 
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: `${theme.palette.text}`,
+    color: theme.palette.text,
     width:"100%",
     "& .MuiInputBase-input": {
       padding: theme.spacing(1, 1, 1, 0),
@@ -18,9 +18,9 @@ export const SearchField = styled("div")(({ theme }) => ({
     position: "relative",
     display:"flex",
     borderRadius:"0",
-    backgroundColor:`${theme.palette.common.white}`,
+    backgroundColor:theme.palette.common.white,
     "&:hover": {
-      backgroundColor: `${theme.palette.common.white}`,
+      backgroundColor: theme.palette.common.white,
     },
     marginRight: theme.spacing(2),
     marginLeft: "0.8rem",
@@ -37,7 +37,7 @@ const useStyles= createUseStyles({
         marginBottom:"2rem",
     },
     Description:{
-        color:`${theme.palette.text}`,
+        color:theme.palette.text,
         marginBottom:"1rem"
     },
     GridBody:{
@@ -53,12 +53,12 @@ const useStyles= createUseStyles({
     },
     Icons:{
         '& .MuiSvgIcon-root':{
-            color:`${theme.palette.common.white}`,
+            color:theme.palette.common.white,
         }
     },
     Title:{
         display:"block",
-        color:`${theme.palette.title}`,
+        color:theme.palette.title,
         marginBottom:"3.8rem",
     },
     Container:{
@@ -79,10 +79,10 @@ const useStyles= createUseStyles({
         },
     },
     MainFooter:{
-        backgroundColor:`${theme.palette.background.dark}`,
+        backgroundColor:theme.palette.background.dark,
     },
     HeaderTitle:{
-        color:`${theme.palette.title}`,
+        color:theme.palette.title,
         textAlign:'center',
         lineHeight:"1.3",
         '& span':{
@@ -96,10 +96,10 @@ const useStyles= createUseStyles({
     },
     SendButton:{
         padding:"1.2rem 4rem",
-        backgroundColor:`${theme.palette.primary.main}`,
+        backgroundColor:theme.palette.primary.main,
         fontSize:"1.3rem",
         border:"none",
-        color:`${theme.palette.title}`,
+        color:theme.palette.title,
         [theme.breakpoints.down("md")]:{
             padding:"1.2rem 1.2rem"
         }
