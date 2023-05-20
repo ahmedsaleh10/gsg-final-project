@@ -77,7 +77,6 @@ const useStyles = createUseStyles({
     },
     marginRight: theme.spacing(2),
     marginLeft: "0.8rem",
-    width: "100%",
   }));
 
   export const SearchIconWrapper = styled(Box)(({ theme }) => ({
