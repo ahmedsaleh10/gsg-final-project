@@ -92,7 +92,7 @@ const TopNav = () => {
           <Stack display={{ xs: "none", md: "block" }}>
             {pages.map((page) => (
               <Link
-                variant="body"
+                variant="body1"
                 className={
                   activePage === page ? classes.ActivePage : classes.Pages
                 }

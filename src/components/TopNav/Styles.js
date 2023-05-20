@@ -10,13 +10,13 @@ const useStyles = createUseStyles({
       backgroundColor: "white",
       padding: "0 8rem",
       [theme.breakpoints.down("lg")]: {
-        padding: "0rem",
+        padding: "0rem 2rem",
       },
       boxShadow: "none",
     },
     Pages: {
       marginRight: "2.5rem",
-      color: `${theme.palette.text}`,
+      color: theme.palette.text,
       fontFamily: theme.typography.fontFamily,
       textDecoration: "none",
     },
@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
         border: `2px solid ${theme.palette.background.paper}`,
         padding: "0 4px",
         backgroundColor: "#ed3558",
-        color: `${theme.palette.common.white}`,
+        color: theme.palette.common.white,
       },
       "& .MuiSvgIcon-root": {
         fontSize: "30px",
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
     },
     ActivePage: {
       marginRight: "2.5rem",
-      color: `${theme.palette.text}`,
+      color: theme.palette.text,
       fontFamily:theme.typography.fontFamily,
       textDecoration: "underline",
       fontWeight: 500,
@@ -77,7 +77,6 @@ const useStyles = createUseStyles({
     },
     marginRight: theme.spacing(2),
     marginLeft: "0.8rem",
-    width: "100%",
   }));
 
   export const SearchIconWrapper = styled(Box)(({ theme }) => ({
