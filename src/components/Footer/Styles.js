@@ -2,6 +2,7 @@ import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 import InputBase from "@mui/material/InputBase";
 import { styled } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: theme.palette.text,
@@ -14,7 +15,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   }));
 
-export const SearchField = styled("div")(({ theme }) => ({
+export const SearchField = styled(Box)(({ theme }) => ({
     position: "relative",
     display:"flex",
     borderRadius:"0",
