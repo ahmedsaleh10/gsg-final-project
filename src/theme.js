@@ -106,6 +106,7 @@ let theme = createTheme({
         body2:{
             //bigPrice
             fontSize:"2rem",
+            fontWeight:"700"
         },
         button:{
             fontSize:"1.25rem",
