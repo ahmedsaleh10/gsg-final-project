@@ -47,7 +47,7 @@ let theme = createTheme({
         MuiSvgIcon:{
             styleOverrides:{
                 root:{
-                    fontSize:"2.5rem",
+                    fontSize:"1.8rem",
                 }
             }
         },
@@ -106,7 +106,7 @@ let theme = createTheme({
         body2:{
             //bigPrice
             fontSize:"2rem",
-            fontWeight:"700"
+            fontWeight:"800"
         },
         button:{
             fontSize:"1.25rem",
