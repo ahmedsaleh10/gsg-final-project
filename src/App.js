@@ -1,16 +1,17 @@
 import { ThemeProvider } from '@mui/material';
 import './App.module.css';
 import theme from './theme';
-import Footer from './components/Footer/Footer';
-import TopNav from './components/TopNav/TopNav'
+import ProductsProvider from './providers/ProductsProvider';
+import Routing from './Routers';
+
 function App() {
+
   return (
+    <ProductsProvider>
       <ThemeProvider theme={theme}>
-        <TopNav/>
-        <Footer/> 
-     </ThemeProvider>
-      
-      
+        <Routing/>
+      </ThemeProvider>
+    </ProductsProvider>
   );
 }
 
