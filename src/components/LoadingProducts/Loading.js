@@ -12,7 +12,7 @@ const Loading = () => {
         spacing={2}
         my={4}
         width={"100%"}
-        height={"100vh"}
+        height={"30vh"}
       >
         <CircularProgress />
         <Typography variant="body1">Loading...</Typography>
