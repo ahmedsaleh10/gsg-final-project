@@ -14,7 +14,7 @@ const BestSales = ({products}) => {
     const classes = useStyles()
     const salesProducts = products.filter((product)=> product.sale === true)
   return (
-    <div className={classes.SliderContainer}>
+    <div id='Swiper' className={classes.SliderContainer}>
         <Typography variant='subtitle1'>Best Sales</Typography>
         <Swiper
             loop={true}

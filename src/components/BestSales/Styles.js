@@ -12,8 +12,6 @@ const useStyles = createUseStyles({
         marginTop:"1.5rem",
         overflow:"visible",
         '& div':{
-            flexDirection:'row !important',
-            alignItems:'flex-end',
             '& div':{
                 maxHeight:'577px',
                 overflow:'hidden'
