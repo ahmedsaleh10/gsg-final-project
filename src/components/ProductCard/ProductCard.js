@@ -34,12 +34,12 @@ const ProductCard = ({ product }) => {
           direction={"row"}
           alignItems={"center"}
           justifyContent={"flex-start"}
-          spacing={2}
+          spacing={3}
         >
-          <Typography variant="body1" className={classes.DeletedPrice}>
+          <Typography variant="body2" className={classes.DeletedPrice}>
             ${number.toFixed(2)}
           </Typography>
-          <Typography variant="body1"> ${product.price} </Typography>
+          <Typography variant="body2"> ${product.price} </Typography>
         </Stack>
       )
        : <Stack
