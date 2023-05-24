@@ -9,7 +9,8 @@ const useStyles = createUseStyles({
     CardImage:{
         width:"100%",
         height:"310px",
-        
+        objectFit:"cover",
+        objectPosition:'top',
     },
     ProductTitle:{
         paddingTop:"0.5rem"
