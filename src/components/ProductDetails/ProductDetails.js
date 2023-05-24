@@ -7,7 +7,6 @@ const ProductDetails = ({productId}) => {
 
     if(products){
       const product = products.find(item => item.id === parseInt(productId) )
-      console.log(product)
       return(
        <>{product.description}</>
     )
