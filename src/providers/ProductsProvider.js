@@ -3,10 +3,10 @@ import ProductContext from "../contexts/ProductsContext";
 import axios from "axios";
 
 const ProductsProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState("");
   const getProducts = async () => {
     const response = await axios.get(
-      "https://run.mocky.io/v3/89cea58a-97a5-4ab9-aefa-6ecd6021b483"
+      "https://run.mocky.io/v3/1a8abb1a-5296-4fa0-b34e-dfbca6937bd3"
     );
     const {data} = response
     setProducts(data);
