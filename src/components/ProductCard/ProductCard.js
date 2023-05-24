@@ -39,11 +39,8 @@ const ProductCard = ({ product }) => {
           </Typography>
           <Typography variant="body1"> ${product.price} </Typography>
         </Stack>
-      ) : ""
-      }
-
-      {!product.sale ? (
-        <Stack
+      )
+       : <Stack
           direction={"row"}
           justifyContent={"space-between"}
           alignItems={"center"}
@@ -57,9 +54,7 @@ const ProductCard = ({ product }) => {
             readOnly
           />
         </Stack>
-      ) : "" 
       }
-
       <Typography variant="body1" className={classes.ProductTitle}>
         {product.title}
       </Typography>
