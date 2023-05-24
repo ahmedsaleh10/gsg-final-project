@@ -9,6 +9,8 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const ProductCard = ({ product }) => {
   const classes = useStyles();
+  const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
+
   return (
     <div className={classes.CardContainer}>
       <Link className={classes.Link}>
@@ -35,7 +37,7 @@ const ProductCard = ({ product }) => {
           spacing={2}
         >
           <Typography variant="body1" className={classes.DeletedPrice}>
-            ${(100 * product.price) / (100 - 100 * product.salePercantage)}
+            ${number.toFixed(2)}
           </Typography>
           <Typography variant="body1"> ${product.price} </Typography>
         </Stack>
