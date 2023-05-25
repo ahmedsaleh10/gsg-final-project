@@ -39,7 +39,8 @@ let theme = createTheme({
                 root:{
                     padding:"0",
                     '&.MuiGrid-item':{
-                        padding:"0.5rem",
+                        padding:"0.5rem 0.5rem 0.5rem 0",
+                        
                     }
                 }
             }

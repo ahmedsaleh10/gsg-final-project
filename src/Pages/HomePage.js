@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Loading from "../components/LoadingProducts/Loading";
 import BestSales from "../components/BestSales/BestSales";
 
+
 const HomePage = () => {
   const products = useContext(ProductContext);
   if (products) {
