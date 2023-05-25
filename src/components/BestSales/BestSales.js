@@ -5,7 +5,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import { Grid } from "swiper";
 import ProductCard from '../ProductCard/ProductCard';
-import SliderButtons from './SliderButtons';
+import SwiperButtons from './SwiperButtons';
 import useStyles from './Styles';
 import {Typography } from "@mui/material";
 
@@ -52,7 +52,7 @@ const BestSales = ({products}) => {
                     <SwiperSlide key={product.id}>{<ProductCard product={product} />}</SwiperSlide>
                 )
             })}
-            <SliderButtons/>
+            <SwiperButtons/>
     </Swiper>
     </div>
    
