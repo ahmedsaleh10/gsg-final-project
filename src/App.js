@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/material';
-import './App.module.css';
+import './App.css';
 import theme from './theme';
 import ProductsProvider from './providers/ProductsProvider';
 import Routing from './Routers';

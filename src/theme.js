@@ -88,6 +88,7 @@ let theme = createTheme({
             //sectionTitle
             fontSize:"4rem",
             fontWeight:"700",
+            color:"#1a1a68",
         },
         subtitle2:{
             fontSize:"2.5rem",

@@ -47,13 +47,13 @@ const TopNav = () => {
     <AppBar className={classes.AppBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters className={classes.Toolbar}>
-          <Stack>
             <IconButton
               size="large"
               aria-controls="menu-appbar"
               onClick={handleOpenNavMenu}
+              className={classes.BurgerdIcon}
             >
-              <MenuIcon className={classes.BurgerdIcon} />
+              <MenuIcon  />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -84,7 +84,6 @@ const TopNav = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Stack>
           <Box>
             <img src="/images/logo.jpg" alt="logo" />
           </Box>

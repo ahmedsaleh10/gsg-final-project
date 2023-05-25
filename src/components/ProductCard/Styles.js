@@ -4,12 +4,12 @@ import theme from "../../theme";
 const useStyles = createUseStyles({
     CardContainer:{
         display:"inline-block",
-        width:"300px",
+        width:"100%",
     },
     CardImage:{
         width:"100%",
-        height:"310px",
-        objectFit:"cover",
+        height:"500px",
+        objectFit:'cover',
         objectPosition:'top',
     },
     ProductTitle:{
