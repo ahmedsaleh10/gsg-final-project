@@ -6,11 +6,16 @@ import { Stack } from "@mui/system";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { useNavigate } from "react-router";
 
 const ProductCard = ({ product }) => {
   const classes = useStyles();
   const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
-
+  const navigate = useNavigate();
+  const handleProductDetails = () => {
+    navigate(`/products/${product.id}`)
+  }
+  
   return (
     <div className={classes.CardContainer}>
       <Link className={classes.Link}>
@@ -22,7 +27,7 @@ const ProductCard = ({ product }) => {
           <IconButton className={classes.IconButton}>
             <ShoppingCartIcon />
           </IconButton>
-          <IconButton className={classes.IconButton}>
+          <IconButton className={classes.IconButton} onClick={handleProductDetails}>
             <VisibilityIcon />
           </IconButton>
         </div>
