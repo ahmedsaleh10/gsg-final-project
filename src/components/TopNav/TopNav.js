@@ -18,15 +18,16 @@ import {
   Link,
   Stack,
   } from "@mui/material";
+import { useNavigate } from "react-router";
   
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState("Home");
-
+  const navigate = useNavigate()
   const classes = useStyles();
 
-  const pages = ["Home", "Mens", "Womens", "Kids", "Blogs"];
+  const pages = ["Home", "Men", "Women", "Kids", "Blogs"];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -74,7 +75,10 @@ const TopNav = () => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Link
-                    onClick={() => setActivePage(page)}
+                    onClick={() => {
+                      setActivePage(page)
+                      page === 'Home' ? navigate('/') : navigate(`/${page}`)
+                    }}
                     className={
                       activePage === page ? classes.ActivePage : classes.Pages
                     }
@@ -96,7 +100,10 @@ const TopNav = () => {
                   activePage === page ? classes.ActivePage : classes.Pages
                 }
                 key={page}
-                onClick={() => setActivePage(page)}
+                onClick={() => {
+                  setActivePage(page)
+                  page === 'Home' ? navigate('/') : navigate(`/${page}`)
+                }}
               >
                 {page}
               </Link>
