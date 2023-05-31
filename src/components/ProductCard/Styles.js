@@ -5,6 +5,8 @@ const useStyles = createUseStyles({
     CardContainer:{
         display:"inline-block",
         width:"100%",
+        maxHeight:'584px',
+        overflow:'hidden'
     },
     CardImage:{
         width:"100%",

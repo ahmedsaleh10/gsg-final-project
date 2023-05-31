@@ -7,3 +7,40 @@ body{
     flex-direction: row ;
     align-items: flex-end;
 }
+#Swiper>.swiper>.swiper-pagination{
+    bottom: -55px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+@media (max-width:900px) {
+    #Swiper>.swiper>.swiper-pagination{
+        justify-content: center;
+        bottom: -135px;
+        row-gap: 0.5rem;
+    }
+}
+
+
+.swiper-pagination>.swiper-pagination-bullet {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    color: #1a2a3c;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  
+  .swiper-pagination>.swiper-pagination-bullet-active {
+    color: whitesmoke;
+    background: #1a2a3c;
+  }
