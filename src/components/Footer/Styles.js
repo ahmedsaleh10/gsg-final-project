@@ -81,7 +81,13 @@ const useStyles= createUseStyles({
     },
     MainFooter:{
         backgroundColor:theme.palette.background.dark,
-    },
+        "& div":{
+            "& div":{
+                " & div":{
+                    paddingLeft:'0 !important'
+                }
+            }
+    }},
     HeaderTitle:{
         color:theme.palette.title,
         textAlign:'center',
