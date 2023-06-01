@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useStyles from './Styles'
 import { Grid, Typography ,Stack} from '@mui/material'
 import Rating from "@mui/material/Rating";
@@ -28,6 +28,7 @@ const ProductDetail = ({product}) => {
 
     const classes = useStyles()
 
+    useEffect(()=> window.scrollTo(0,0),[])
   return (
     <div className={classes.Container}>
         <Grid container columns={10}>
