@@ -19,6 +19,7 @@ const useStyles = createUseStyles({
       color: theme.palette.text,
       fontFamily: theme.typography.fontFamily,
       textDecoration: "none",
+      cursor:'pointer'
     },
     Toolbar: {
       justifyContent: "space-between",
@@ -50,6 +51,7 @@ const useStyles = createUseStyles({
       fontFamily:theme.typography.fontFamily,
       textDecoration: "underline",
       fontWeight: 500,
+      cursor:'pointer'
     },
     SearchField: {
       display: "block",
