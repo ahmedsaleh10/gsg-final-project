@@ -15,7 +15,7 @@ const FooterBody = () => {
     const classes =useStyles()
   return (
     <div className={classes.Container}>
-        <Grid className={classes.GridBody} container spacing={3} columns={10}>
+        <Grid className={classes.GridBody} container spacing={1} columns={10}>
         <Grid item xs={10} lg={2}>
                 <img className={classes.Image} src='/images/logo.jpg' alt='logo'/>
                 <Typography variant='body1' className={classes.Description}> Our Company is dedicated to creating unique and comfortable clothing from Men's, Women's and Kid's</Typography>
