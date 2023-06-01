@@ -23,7 +23,8 @@ import { useNavigate } from "react-router";
 const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [activePage, setActivePage] = useState("Home");
+  const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
+  activePage === "" && setActivePage("Home")
   const navigate = useNavigate()
   const classes = useStyles();
 
