@@ -1,5 +1,5 @@
 import { IconButton, Link, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import useStyles from "./Styles";
 import Rating from "@mui/material/Rating";
 import { Stack } from "@mui/system";
@@ -7,8 +7,10 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useNavigate } from "react-router";
+import FavoraiteContext from "../../contexts/FavoraiteContext";
 
 const ProductCard = ({ product }) => {
+  const Favoraite = useContext(FavoraiteContext)
   const classes = useStyles();
   const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
   const navigate = useNavigate();
@@ -21,7 +23,7 @@ const ProductCard = ({ product }) => {
       <Link className={classes.Link}>
         <div className={classes.Buttons}>
           {/* each button should do some actions */}
-          <IconButton className={classes.IconButton}>
+          <IconButton className={classes.IconButton} onClick={Favoraite.handleFavoriteButton}>
             <FavoriteBorderIcon />
           </IconButton>
           <IconButton className={classes.IconButton}>

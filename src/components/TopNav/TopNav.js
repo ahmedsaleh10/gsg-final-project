@@ -1,5 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Search from "./Search";
@@ -19,8 +19,10 @@ import {
   Stack,
   } from "@mui/material";
 import { useNavigate } from "react-router";
+import FavoraiteContext from "../../contexts/FavoraiteContext";
   
 const TopNav = () => {
+  const Favoraite = useContext(FavoraiteContext)
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
@@ -114,7 +116,7 @@ const TopNav = () => {
             <Stack spacing={2.5} direction="row">
               <Link>
                 <Badge
-                  badgeContent={0}
+                  badgeContent={Favoraite.badgeNumber}
                   showZero
                   className={classes.Badge}
                   max={99}
