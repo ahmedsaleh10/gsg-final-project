@@ -47,6 +47,7 @@ const useStyles = createUseStyles({
         height:'50px',
         color: "white",
         backgroundColor: theme.palette.secondary.dark,
+        cursor:'pointer'
     },
     SizeUnselectedButton:{
         border: "2px solid gray",
@@ -56,12 +57,14 @@ const useStyles = createUseStyles({
         height:'50px',
         color: "black",
         backgroundColor: theme.palette.background.main,
+        cursor:'pointer'
     },
     ButtonsForNumberOfItems:{
         border:'2px solid gray',
         borderRadius:'50%',
         width:'50px',
         height:'50px',
+        cursor:'pointer',
     },
     CartButton:{
         backgroundColor:theme.palette.primary.dark,
@@ -75,7 +78,8 @@ const useStyles = createUseStyles({
             padding:'1rem 4rem'
         },
         fontWeight:500,
-        fontSize:'1rem'
+        fontSize:'1rem',
+        cursor:'pointer'
     },
     FavoriteIcon:{
         backgroundColor:theme.palette.common.white,
@@ -84,7 +88,8 @@ const useStyles = createUseStyles({
             color:theme.palette.common.black,
             fontSize:'2.5rem',
             opacity:'0.6'
-        }
+        },
+        cursor:'pointer'
     },
     FeaturesButton:{
         fontSize: "2.5rem",
