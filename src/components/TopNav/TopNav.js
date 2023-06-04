@@ -19,10 +19,10 @@ import {
   Stack,
   } from "@mui/material";
 import { useNavigate } from "react-router";
-import FavoraiteContext from "../../contexts/FavoraiteContext";
+import FavouriteContext from "../../contexts/FavouriteContext";
   
 const TopNav = () => {
-  const Favoraite = useContext(FavoraiteContext)
+  const Favourite = useContext(FavouriteContext)
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
@@ -116,7 +116,7 @@ const TopNav = () => {
             <Stack spacing={2.5} direction="row">
               <Link>
                 <Badge
-                  badgeContent={Favoraite.badgeNumber}
+                  badgeContent={Favourite.badgeNumber}
                   showZero
                   className={classes.Badge}
                   max={99}
