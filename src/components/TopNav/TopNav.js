@@ -114,7 +114,7 @@ const TopNav = () => {
           </Stack>
           <Stack direction={"row"} alignItems={"center"} spacing={3}>
             <Stack spacing={2.5} direction="row">
-              <Link href="/favourite">
+              <Link onClick={()=> navigate('/favourite')}>
                 <Badge
                   badgeContent={Favourite.badgeNumber}
                   showZero
