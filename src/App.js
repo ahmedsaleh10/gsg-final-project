@@ -3,17 +3,17 @@ import './App.css';
 import theme from './theme';
 import ProductsProvider from './providers/ProductsProvider';
 import Routing from './Routers';
-import FavoraiteProvider from './providers/FavoraiteProvider';
+import FavouriteProvider from './providers/FavouriteProvider';
 
 function App() {
 
   return (
     <ProductsProvider>
-      <FavoraiteProvider>
+      <FavouriteProvider>
         <ThemeProvider theme={theme}>
           <Routing/>
         </ThemeProvider>
-      </FavoraiteProvider>
+      </FavouriteProvider>
     </ProductsProvider>
   );
 }
