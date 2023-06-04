@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import useStyles from './Styles'
 import { Grid, Typography ,Stack} from '@mui/material'
 import Rating from "@mui/material/Rating";
@@ -10,11 +10,13 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BuyingFeatures from './BuyingFeatures';
+import FavouriteContext from '../../contexts/FavouriteContext';
 
 const ProductDetail = ({product}) => {
     const SizesArray = ['XS','S','M','L','XL']
     const [selectedSize, setSelectedSize] = useState("M");
     const [numberOfItems, setNumberOfItems] = useState(1);
+    const Favourite = useContext(FavouriteContext)
     const handleOnChangeSelectedSize = (value) => {
         setSelectedSize(value);
       };
@@ -63,7 +65,7 @@ const ProductDetail = ({product}) => {
                     </Stack>
                     <Stack direction={'row'} spacing={2}>
                         <button className={classes.CartButton}> Add to Cart </button>
-                        <button className={classes.FavoriteIcon}> <FavoriteBorderIcon color='action'/> </button>
+                        <button className={classes.FavoriteIcon} onClick={()=> Favourite.handleFavoriteButton(product)}> <FavoriteBorderIcon color='action'/> </button>
                     </Stack>
                     
                 </Stack>
