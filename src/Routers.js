@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage'
 import ProductDetailsPage from './Pages/ProductDeatilsPage'
 import MenPage from './Pages/MenPage'
 import WomenPage from './Pages/WomenPage'
+import FavouritePage from './Pages/FavouritePage'
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
             <Route path='/products/:id' element={<ProductDetailsPage/>}/>
             <Route path='/men' element={<MenPage/>}/>
             <Route path='/women' element={<WomenPage/>}/>
+            <Route path='/favourite' element={<FavouritePage/>}/>
             <Route path='*' element={<>not found</>} />
         </Routes>
     </BrowserRouter>
