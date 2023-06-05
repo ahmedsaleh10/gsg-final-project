@@ -3,14 +3,17 @@ import './App.css';
 import theme from './theme';
 import ProductsProvider from './providers/ProductsProvider';
 import Routing from './Routers';
+import FavouriteProvider from './providers/FavouriteProvider';
 
 function App() {
 
   return (
     <ProductsProvider>
-      <ThemeProvider theme={theme}>
-        <Routing/>
-      </ThemeProvider>
+      <FavouriteProvider>
+        <ThemeProvider theme={theme}>
+          <Routing/>
+        </ThemeProvider>
+      </FavouriteProvider>
     </ProductsProvider>
   );
 }

@@ -26,6 +26,7 @@ const useStyles = createUseStyles({
       alignItems: "center",
     },
     Badge: {
+      cursor:'pointer',
       "& .MuiBadge-badge": {
         right: -3,
         top: 21,
