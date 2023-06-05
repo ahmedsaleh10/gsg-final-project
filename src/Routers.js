@@ -5,6 +5,7 @@ import ProductDetailsPage from './Pages/ProductDeatilsPage'
 import MenPage from './Pages/MenPage'
 import WomenPage from './Pages/WomenPage'
 import FavouritePage from './Pages/FavouritePage'
+import CartPage from './Pages/CartPage'
 
 const Routing = () => {
   return (
@@ -15,6 +16,7 @@ const Routing = () => {
             <Route path='/men' element={<MenPage/>}/>
             <Route path='/women' element={<WomenPage/>}/>
             <Route path='/favourite' element={<FavouritePage/>}/>
+            <Route path='/cart' element={<CartPage/>} />
             <Route path='*' element={<>not found</>} />
         </Routes>
     </BrowserRouter>
