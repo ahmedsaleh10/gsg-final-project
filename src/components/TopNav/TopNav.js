@@ -20,9 +20,11 @@ import {
   } from "@mui/material";
 import { useNavigate } from "react-router";
 import FavouriteContext from "../../contexts/FavouriteContext";
+import CartContext from "../../contexts/CartContext";
   
 const TopNav = () => {
   const Favourite = useContext(FavouriteContext)
+  const Cart = useContext(CartContext)
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
@@ -124,9 +126,9 @@ const TopNav = () => {
                   <FavoriteOutlinedIcon />
                 </Badge>
               </Link>
-              <Link>
+              <Link onClick={()=> navigate('/cart')}>
                 <Badge
-                  badgeContent={0}
+                  badgeContent={Cart.badgeNumber}
                   showZero
                   className={classes.Badge}
                   max={99}
