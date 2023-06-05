@@ -8,9 +8,11 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useNavigate } from "react-router";
 import FavouriteContext from "../../contexts/FavouriteContext";
+import CartContext from "../../contexts/CartContext";
 
 const ProductCard = ({ product }) => {
   const Favourite = useContext(FavouriteContext)
+  const Cart = useContext(CartContext)
   const classes = useStyles();
   const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const ProductCard = ({ product }) => {
           <IconButton className={classes.IconButton} onClick={()=>Favourite.handleFavoriteButton(product)}>
             <FavoriteBorderIcon />
           </IconButton>
-          <IconButton className={classes.IconButton}>
+          <IconButton className={classes.IconButton} onClick={() => Cart.handleCartButton(product)}>
             <ShoppingCartIcon />
           </IconButton>
           <IconButton className={classes.IconButton} onClick={handleProductDetails}>
