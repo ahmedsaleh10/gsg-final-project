@@ -26,7 +26,13 @@ const useStyles = createUseStyles({
         [theme.breakpoints.down('md')]:{
             textAlign:'center'
         }
-    }
+    },
+    ProductImage:{
+        width:'auto',
+        height:'100%',
+        [theme.breakpoints.down('md')]:{
+            width:'50%'
+    }}
 })
 
 export default useStyles

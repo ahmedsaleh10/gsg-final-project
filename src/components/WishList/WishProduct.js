@@ -8,7 +8,7 @@ const WishProduct = ({product}) => {
   return (
     <Grid container columns={12}  rowGap={'0.75rem'} width={'100%'} alignItems={'center'} flexWrap={{xs:'nowrap',md:'wrap'}} direction={{xs:'column',md:'row'}} className={classes.GridContainer}>
         <Grid item md={3} height={'100%'} className={classes.GridImageItem}>
-            <img src={product.image} alt='img' width={'50%'} height={'100%'}/>
+            <img src={product.image} alt='img' className={classes.ProductImage}/>
         </Grid>
         <Grid item md={4}>
         <Typography variant='body1' className={classes.ProductTitle} color={theme.palette.primary.dark}>{product.title}</Typography>
