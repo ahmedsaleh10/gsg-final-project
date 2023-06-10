@@ -15,7 +15,7 @@ const CartList = ({ products, deleteHandler }) => {
   for (let i = 0; i < cartListProducts.length; i++) {
     (totalPrice +=
      cartListProducts[i].numberOfProductDemand *
-      cartListProducts[i].product.price).toFixed(2)
+      cartListProducts[i].product.price)
   }
 
   const handleDeletItem = (productId) => {
@@ -130,7 +130,7 @@ const CartList = ({ products, deleteHandler }) => {
         );
       })}
       <Typography variant="subtitle1" textAlign={"center"}>
-        Total Price = {`${totalPrice}`}$
+        Total Price = {`${totalPrice.toFixed(2)}`}$
       </Typography>
     </div>
   );
