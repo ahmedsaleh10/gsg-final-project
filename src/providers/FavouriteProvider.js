@@ -1,29 +1,29 @@
 import React from "react";
-import FavouriteContext from "../contexts/FavouriteContext";
+import FavouritesContext from "../contexts/FavouritesContext";
 import { useState } from "react";
 
 const FavouriteProvider = ({ children }) => {
   const [badgeNumber, setBadgeNumber] = useState(0);
-  const [FavouriteProducts,setFavouriteProducts] = useState([])
+  const [favouritesProducts,setFavouritesProducts] = useState([])
   
   const handleFavoriteButton = (product) => {
-    const includedProduct = FavouriteProducts.includes(product)
+    const includedProduct = favouritesProducts.includes(product)
     if(!includedProduct){
       setBadgeNumber((prev) => prev + 1)
-      setFavouriteProducts([...FavouriteProducts,product])
+      setFavouritesProducts([...favouritesProducts,product])
     }
   };
 
   const handleDeleteFavouriteProduct = (productId) => {
     setBadgeNumber(badgeNumber-1)
-    const newFavouriteProducts = FavouriteProducts.filter( (product) => product.id !== productId)
-    setFavouriteProducts(newFavouriteProducts)
+    const newFavouritesProducts = favouritesProducts.filter( (product) => product.id !== productId)
+    setFavouritesProducts(newFavouritesProducts)
   }
 
   return (
-    <FavouriteContext.Provider value={{ badgeNumber,FavouriteProducts, handleFavoriteButton , handleDeleteFavouriteProduct }}>
+    <FavouritesContext.Provider value={{ badgeNumber,favouritesProducts, handleFavoriteButton , handleDeleteFavouriteProduct }}>
       {children}
-    </FavouriteContext.Provider>
+    </FavouritesContext.Provider>
   );
 };
 

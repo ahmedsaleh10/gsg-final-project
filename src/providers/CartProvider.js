@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 const CartProvider = ({children}) => {
     const [badgeNumber, setBadgeNumber] = useState(0);
-    const [CartProducts,setCartProducts] = useState([])
+    const [cartProducts,setCartProducts] = useState([])
 
     const handleCartButton = (product,numberOfItems = 1) => {
-        for(let i = 0 ; i<CartProducts.length;i++){
-            if(CartProducts[i].product === product){
+        for(let i = 0 ; i<cartProducts.length;i++){
+            if(cartProducts[i].product === product){
                 var includedProduct = true
             }
             else{
@@ -17,18 +17,18 @@ const CartProvider = ({children}) => {
         }
         if(!includedProduct){
           setBadgeNumber((prev) => prev + 1)
-        setCartProducts([...CartProducts,{"product":product,"numberOfProductDemand":numberOfItems}])
+        setCartProducts([...cartProducts,{"product":product,"numberOfProductDemand":numberOfItems}])
         }
       };
 
     const handleDeleteCartProduct = (productId) => {
         setBadgeNumber(badgeNumber-1)
-        const newCartProducts = CartProducts.filter( (item) => item.product.id !== productId)
+        const newCartProducts = cartProducts.filter( (item) => item.product.id !== productId)
         setCartProducts(newCartProducts)
     } 
 
   return (
-    <CartContext.Provider value={{badgeNumber,CartProducts,handleCartButton,handleDeleteCartProduct}}>
+    <CartContext.Provider value={{badgeNumber,cartProducts,handleCartButton,handleDeleteCartProduct}}>
         {children}
     </CartContext.Provider>
   )

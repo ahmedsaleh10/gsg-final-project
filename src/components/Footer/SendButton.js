@@ -4,7 +4,7 @@ import useStyles from './Styles'
 const SendButton = () => {
     const classes=useStyles()
   return (
-    <button className={classes.SendButton}>
+    <button className={classes.sendButton}>
         Send
     </button>
   )

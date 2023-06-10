@@ -10,15 +10,15 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BuyingFeatures from "./BuyingFeatures";
-import FavouriteContext from "../../contexts/FavouriteContext";
+import FavouritesContext from "../../contexts/FavouritesContext";
 import CartContext from "../../contexts/CartContext";
 
 const ProductDetail = ({ product }) => {
   const cartContext = useContext(CartContext);
-  const SizesArray = ["XS", "S", "M", "L", "XL"];
+  const sizesArray = ["XS", "S", "M", "L", "XL"];
   const [selectedSize, setSelectedSize] = useState("M");
   const [numberOfItems, setNumberOfItems] = useState(1);
-  const Favourite = useContext(FavouriteContext);
+  const favourite = useContext(FavouritesContext);
   const handleOnChangeSelectedSize = (value) => {
     setSelectedSize(value);
   };
@@ -26,9 +26,9 @@ const ProductDetail = ({ product }) => {
 
   useEffect(() => window.scrollTo(0, 0), []);
   return (
-    <div className={classes.Container}>
+    <div className={classes.container}>
       <Grid container columns={10}>
-        <Grid item xs={10} md={5} className={classes.GridItem1}>
+        <Grid item xs={10} md={5} className={classes.gridItem1}>
           <img
             src={product.image}
             width={"100%"}
@@ -36,8 +36,8 @@ const ProductDetail = ({ product }) => {
             alt="productImg"
           />
         </Grid>
-        <Grid item xs={10} md={5} className={classes.GridItem2}>
-          <div className={classes.InformationContainer}>
+        <Grid item xs={10} md={5} className={classes.gridItem2}>
+          <div className={classes.informationContainer}>
             <Typography
               variant="subtitle2"
               color={theme.palette.secondary.light}
@@ -63,7 +63,7 @@ const ProductDetail = ({ product }) => {
                 precision={0.5}
                 size={"large"}
                 readOnly
-                className={classes.Rating}
+                className={classes.rating}
               />
               <Typography
                 variant="caption"
@@ -83,7 +83,7 @@ const ProductDetail = ({ product }) => {
               Size:
             </Typography>
             <Stack direction={"row"} spacing={{ xs: 0.5, sm: 1, md: 1.5 }}>
-              {SizesArray.map((size, index) => {
+              {sizesArray.map((size, index) => {
                 return (
                   <SizeButton
                     content={size}
@@ -107,7 +107,7 @@ const ProductDetail = ({ product }) => {
                 onClick={() => {
                   numberOfItems > 0 && setNumberOfItems(numberOfItems - 1)
                 }}
-                className={classes.ButtonsForNumberOfItems}
+                className={classes.buttonsForNumberOfItems}
               >
                 
                 <RemoveIcon />
@@ -123,7 +123,7 @@ const ProductDetail = ({ product }) => {
                 onClick={() => {
                   setNumberOfItems(numberOfItems + 1);
                 }}
-                className={classes.ButtonsForNumberOfItems}
+                className={classes.buttonsForNumberOfItems}
               >
                 
                 <AddIcon />
@@ -131,15 +131,15 @@ const ProductDetail = ({ product }) => {
             </Stack>
             <Stack direction={"row"} spacing={2}>
               <button
-                className={classes.CartButton}
+                className={classes.cartButton}
                 onClick={() => cartContext.handleCartButton(product,numberOfItems)}
               >
                 
                 Add to Cart
               </button>
               <button
-                className={classes.FavoriteIcon}
-                onClick={() => Favourite.handleFavoriteButton(product)}
+                className={classes.favoriteIcon}
+                onClick={() => favourite.handleFavoriteButton(product)}
               >
                 
                 <FavoriteBorderIcon color="action" />

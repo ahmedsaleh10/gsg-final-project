@@ -6,11 +6,11 @@ import CartList from '../components/CartList/CartList'
 import CartContext from '../contexts/CartContext'
 
 const CartPage = () => {
-    const Cart = useContext(CartContext)
+    const cart = useContext(CartContext)
   return (
     <>
         <TopNav/>
-        <CartList products={Cart.CartProducts} deleteHandler={Cart.handleDeleteCartProduct}/>
+        <CartList products={cart.cartProducts} deleteHandler={cart.handleDeleteCartProduct}/>
         <Features/>
         <Footer/>
     </>

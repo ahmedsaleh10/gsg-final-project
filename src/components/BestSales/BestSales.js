@@ -14,7 +14,7 @@ const BestSales = ({products}) => {
     const classes = useStyles()
     const salesProducts = products.filter((product)=> product.sale === true)
   return (
-    <div id='Swiper' className={classes.SliderContainer}>
+    <div id='Swiper' className={classes.sliderContainer}>
         <Typography variant='subtitle1'>Best Sales</Typography>
         <Swiper
             loop={true}
@@ -22,7 +22,7 @@ const BestSales = ({products}) => {
             rows: 1,
             }}
             modules={[Grid]}
-            className={classes.CustomSwiper}
+            className={classes.customSwiper}
             breakpoints={{
                 300:{
                     slidesPerView:1,

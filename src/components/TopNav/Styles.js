@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 import { Box, Menu } from "@mui/material";
 
 const useStyles = createUseStyles({
-    AppBar: {
+    appBar: {
       position: "static",
       backgroundColor: "white",
       padding: "0 8rem",
@@ -14,18 +14,18 @@ const useStyles = createUseStyles({
       },
       boxShadow: "none",
     },
-    Pages: {
+    pages: {
       marginRight: "2.5rem",
       color: theme.palette.text,
       fontFamily: theme.typography.fontFamily,
       textDecoration: "none",
       cursor:'pointer'
     },
-    Toolbar: {
+    toolbar: {
       justifyContent: "space-between",
       alignItems: "center",
     },
-    Badge: {
+    badge: {
       cursor:'pointer',
       "& .MuiBadge-badge": {
         right: -3,
@@ -39,14 +39,14 @@ const useStyles = createUseStyles({
         fontSize: "30px",
       },
     },
-    BurgerdIcon: {
+    burgerdIcon: {
       color: theme.palette.primary.main,
       display: "none",
       [theme.breakpoints.down("md")]: {
         display: "inline-flex",
       },
     },
-    ActivePage: {
+    activePage: {
       marginRight: "2.5rem",
       color: theme.palette.text,
       fontFamily:theme.typography.fontFamily,
@@ -54,13 +54,13 @@ const useStyles = createUseStyles({
       fontWeight: 500,
       cursor:'pointer'
     },
-    SearchField: {
+    searchField: {
       display: "block",
       [theme.breakpoints.down("md")]: {
         display: "none",
       },
     },
-    MenuItem: {
+    menuItem: {
       padding: 0,
       "& .MuiList-root": {
         padding: 0,

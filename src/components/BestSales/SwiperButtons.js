@@ -7,8 +7,8 @@ const SliderButtons = () => {
     const swiper = useSwiper()
   return (
     <>
-        <button className={classes.SwiperPrevButton} onClick={() => swiper.slidePrev()}/>
-        <button className={classes.SwiperNextButton} onClick={() => swiper.slideNext()}/>
+        <button className={classes.swiperPrevButton} onClick={() => swiper.slidePrev()}/>
+        <button className={classes.swiperNextButton} onClick={() => swiper.slideNext()}/>
     </>
   )
 }

@@ -2,22 +2,22 @@ import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 
 const useStyles = createUseStyles({
-    CardContainer:{
+    cardContainer:{
         display:"inline-block",
         width:"100%",
         maxHeight:'584px',
         overflow:'hidden'
     },
-    CardImage:{
+    cardImage:{
         width:"100%",
         height:"500px",
         objectFit:'cover',
         objectPosition:'top',
     },
-    ProductTitle:{
+    productTitle:{
         paddingTop:"0.5rem"
     },
-    Link:{
+    link:{
         position:"relative",
         '&:hover':{
             '& div':{
@@ -31,14 +31,14 @@ const useStyles = createUseStyles({
             },
         }
     },
-    Buttons:{
+    buttons:{
         display:"none",
         position:"absolute",
         left:0,
         width:"100%",
         height:"-webkit-fill-available",
     },
-    IconButton:{
+    iconButton:{
         width:"45px",
         height:"45px",
         borderRadius:"50%",
@@ -49,7 +49,7 @@ const useStyles = createUseStyles({
             backgroundColor:"#26266b",
         }
     },
-    DeletedPrice:{
+    deletedPrice:{
         textDecoration:"line-through",
         color:"red",
 

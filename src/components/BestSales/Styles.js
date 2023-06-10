@@ -1,14 +1,14 @@
 import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 const useStyles = createUseStyles({
-    SliderContainer:{
+    sliderContainer:{
         overflow:'hidden',
         margin:'8rem',
         [theme.breakpoints.down('lg')]:{
             margin:'2rem',
         }
     },
-    CustomSwiper:{
+    customSwiper:{
         marginTop:"1.5rem",
         overflow:"visible",
         '& div':{
@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
             }
         }
     },
-    SwiperPrevButton:{
+    swiperPrevButton:{
         backgroundImage: `url(${"/images/left.png"})`,
         backgroundPosition:'center',
         backgroundRepeat:'no-repeat',
@@ -37,7 +37,7 @@ const useStyles = createUseStyles({
         border: '3px solid #1a1a68',
         cursor:'pointer',
     },
-    SwiperNextButton:{
+    swiperNextButton:{
         backgroundImage: `url(${"/images/right.png"})`,
         backgroundPosition:'center',
         backgroundRepeat:'no-repeat',

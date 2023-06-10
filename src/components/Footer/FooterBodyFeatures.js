@@ -6,7 +6,7 @@ const FooterBodyFeatures = ({arr,title}) => {
     const classes =useStyles()
   return (
     <Grid item xs={5}  md={2} >
-                <Typography variant='caption' className={classes.Title} > {title}</Typography>
+                <Typography variant='caption' className={classes.title} > {title}</Typography>
                 <Stack spacing={2}>
                     {arr.map((item,index)=>{
                         return(

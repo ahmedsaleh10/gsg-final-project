@@ -10,13 +10,12 @@ import AddIcon from "@mui/icons-material/Add";
 const CartList = ({ products, deleteHandler }) => {
   const [cartListProducts, setCartListProducts] = useState(products);
   const classes = useStyles();
-  console.log(cartListProducts)
   var totalPrice = 0;
 
   for (let i = 0; i < cartListProducts.length; i++) {
     (totalPrice +=
-      cartListProducts[i].numberOfProductDemand *
-      cartListProducts[i].product.price).toFixed(2);
+     cartListProducts[i].numberOfProductDemand *
+      cartListProducts[i].product.price).toFixed(2)
   }
 
   const handleDeletItem = (productId) => {
@@ -47,7 +46,7 @@ const CartList = ({ products, deleteHandler }) => {
   }
 
   return (
-    <div className={classes.Container}>
+    <div className={classes.container}>
       <Typography variant="subtitle1" textAlign={"center"} my={3}>
         Cart List Products
       </Typography>
@@ -77,38 +76,37 @@ const CartList = ({ products, deleteHandler }) => {
               alignItems={"center"}
               flexWrap={{ xs: "nowrap", md: "wrap" }}
               direction={{ xs: "column", md: "row" }}
-              className={classes.GridContainer}
+              className={classes.gridContainer}
             >
               <Grid
                 item
                 md={3}
                 height={"100%"}
-                className={classes.GridImageItem}
+                className={classes.gridImageItem}
               >
                 <img
                   src={item.product.image}
                   alt="img"
-                  width={"50%"}
-                  height={"100%"}
+                  className={classes.productImage}
                 />
               </Grid>
               <Grid item md={4}>
                 <Typography
                   variant="body1"
-                  className={classes.ProductTitle}
+                  className={classes.productTitle}
                   color={theme.palette.primary.dark}
                 >
                   {item.product.title}
                 </Typography>
               </Grid>
               <Grid item md={2}>
-                <Typography variant="body1"> {item.product.price}$</Typography>
+                <Typography variant="body1" textAlign={"center"}> {item.product.price}$</Typography>
               </Grid>
               <Grid item md={3}>
                 <Stack direction={"row"} alignItems={"center"} spacing={2}>
                   <button
                     onClick={() => {handleDecrementDemandItem(item.product.id)}}
-                    className={classes.ButtonsForNumberOfItems}
+                    className={classes.buttonsForNumberOfItems}
                   >
                     <RemoveIcon />
                   </button>
@@ -121,7 +119,7 @@ const CartList = ({ products, deleteHandler }) => {
                   </Typography>
                   <button
                     onClick={()=>{handleIncrementDemandItem(item.product.id)}}
-                    className={classes.ButtonsForNumberOfItems}
+                    className={classes.buttonsForNumberOfItems}
                   >
                     <AddIcon />
                   </button>

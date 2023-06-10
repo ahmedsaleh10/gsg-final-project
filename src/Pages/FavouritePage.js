@@ -3,14 +3,14 @@ import TopNav from '../components/TopNav/TopNav'
 import Footer from '../components/Footer/Footer'
 import Features from '../components/Features/Features'
 import WishList from '../components/WishList/WishList'
-import FavouriteContext from '../contexts/FavouriteContext'
+import FavouritesContext from '../contexts/FavouritesContext'
 const FavouritePage = () => {
-    const Favourite = useContext(FavouriteContext)
+    const favourites = useContext(FavouritesContext)
 
   return (
     <>
         <TopNav/>
-        <WishList Products={Favourite.FavouriteProducts} deleteHandler={Favourite.handleDeleteFavouriteProduct}/>
+        <WishList products={favourites.favouritesProducts} deleteHandler={favourites.handleDeleteFavouriteProduct}/>
         <Features/>
         <Footer/>
     </>
