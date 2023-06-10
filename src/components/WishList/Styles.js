@@ -41,6 +41,7 @@ const useStyles = createUseStyles({
             width:'50%'
         }
     }
+
 })
 
 export default useStyles

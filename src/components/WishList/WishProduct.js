@@ -12,6 +12,7 @@ const WishProduct = ({product}) => {
     <Grid container columns={12}  rowGap={'0.75rem'} width={'100%'} alignItems={'center'} flexWrap={{xs:'nowrap',md:'wrap'}} direction={{xs:'column',md:'row'}} className={classes.gridContainer}>
         <Grid item md={3} height={'100%'} className={classes.gridImageItem}>
             <img src={product.image} alt='img' className={classes.productImage}/>
+
         </Grid>
         <Grid item md={4}>
         <Typography variant='body1' className={classes.productTitle} color={theme.palette.primary.dark}>{product.title}</Typography>
