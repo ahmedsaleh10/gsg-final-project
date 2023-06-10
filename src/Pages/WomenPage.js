@@ -8,11 +8,9 @@ const WomenPage = () => {
   const products = useContext(ProductContext);
   return  (
     <>
-      <TopNav />
       {products ?
        <ProductsPage products={products.filter((product)=>product.category === "women's clothing" && product.sale === false)} />
         : <Loading />}
-      <Footer />
     </>
   
   );

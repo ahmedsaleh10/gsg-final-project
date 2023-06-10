@@ -9,10 +9,8 @@ const CartPage = () => {
     const cart = useContext(CartContext)
   return (
     <>
-        <TopNav/>
         <CartList products={cart.cartProducts} deleteHandler={cart.handleDeleteCartProduct}/>
         <Features/>
-        <Footer/>
     </>
   )
 }

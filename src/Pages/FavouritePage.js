@@ -9,10 +9,8 @@ const FavouritePage = () => {
 
   return (
     <>
-        <TopNav/>
         <WishList products={favourites.favouritesProducts} deleteHandler={favourites.handleDeleteFavouriteProduct}/>
         <Features/>
-        <Footer/>
     </>
   )
 }

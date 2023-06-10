@@ -10,7 +10,6 @@ const ProductDetails = ({ productId }) => {
   const products = useContext(ProductContext);
   return (
     <>
-      <TopNav/>
       {products ? 
         <ProductDetail
           product={products.find((item) => item.id === parseInt(productId))}
@@ -20,7 +19,6 @@ const ProductDetails = ({ productId }) => {
         <Loading />
       }
       <Features/>
-      <Footer/>
     </>
   );
 };
