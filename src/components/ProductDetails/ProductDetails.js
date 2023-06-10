@@ -14,6 +14,7 @@ const ProductDetails = ({ productId }) => {
       {products ? 
         <ProductDetail
           product={products.find((item) => item.id === parseInt(productId))}
+          key={productId}
         />
        : 
         <Loading />

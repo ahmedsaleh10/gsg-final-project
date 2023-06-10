@@ -1,6 +1,6 @@
 import React from "react";
 import FavouriteContext from "../contexts/FavouriteContext";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 const FavouriteProvider = ({ children }) => {
   const [badgeNumber, setBadgeNumber] = useState(0);
@@ -19,14 +19,6 @@ const FavouriteProvider = ({ children }) => {
     const newFavouriteProducts = FavouriteProducts.filter( (product) => product.id !== productId)
     setFavouriteProducts(newFavouriteProducts)
   }
-
-  useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(FavouriteProducts));
-  }, [FavouriteProducts]);
-
-  useEffect(() => {
-    localStorage.setItem('badge', JSON.stringify(badgeNumber));
-  }, [badgeNumber]);
 
   return (
     <FavouriteContext.Provider value={{ badgeNumber,FavouriteProducts, handleFavoriteButton , handleDeleteFavouriteProduct }}>

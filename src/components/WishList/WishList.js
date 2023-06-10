@@ -14,7 +14,7 @@ const WishList = ({ Products, deleteHandler }) => {
   };
 
   return (
-    <div className={classes.WishListContainer}>
+    <div className={classes.Container}>
       <Typography variant="subtitle1" textAlign={"center"} my={3}>
         Wish List Products
       </Typography>

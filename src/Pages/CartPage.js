@@ -10,7 +10,7 @@ const CartPage = () => {
   return (
     <>
         <TopNav/>
-        <CartList products={Cart.CartProducts} deletehandler={Cart.handleDeleteCartProduct}/>
+        <CartList products={Cart.CartProducts} deleteHandler={Cart.handleDeleteCartProduct}/>
         <Features/>
         <Footer/>
     </>

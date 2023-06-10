@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 
 const useStyles = createUseStyles({
-    WishListContainer:{
+    Container:{
         padding:'0rem 8rem',
         [theme.breakpoints.down('lg')]:{
             padding:'0rem 2rem'
@@ -26,7 +26,14 @@ const useStyles = createUseStyles({
         [theme.breakpoints.down('md')]:{
             textAlign:'center'
         }
-    }
+    },
+    ButtonsForNumberOfItems:{
+        border:'2px solid gray',
+        borderRadius:'50%',
+        width:'50px',
+        height:'50px',
+        cursor:'pointer',
+    },
 })
 
 export default useStyles
