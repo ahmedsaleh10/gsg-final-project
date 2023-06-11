@@ -9,10 +9,12 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useNavigate } from "react-router";
 import FavouritesContext from "../../contexts/FavouritesContext";
 import CartContext from "../../contexts/CartContext";
+import AuthUserContext from "../../contexts/AuthUserContext";
 
 const ProductCard = ({ product }) => {
   const favourite = useContext(FavouritesContext)
   const cart = useContext(CartContext)
+  const authUser = useContext(AuthUserContext)
   const classes = useStyles();
   const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
   const navigate = useNavigate();
@@ -23,6 +25,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className={classes.cardContainer}>
       <Link className={classes.link}>
+        {authUser ? 
         <div className={classes.buttons}>
           <IconButton className={classes.iconButton} onClick={() => favourite.handleFavoriteButton(product)}>
             <FavoriteBorderIcon />
@@ -33,7 +36,7 @@ const ProductCard = ({ product }) => {
           <IconButton className={classes.iconButton} onClick={handleProductDetails}>
             <VisibilityIcon />
           </IconButton>
-        </div>
+        </div> : <></> }
         <img src={product.image} className={classes.cardImage} alt="img" />
       </Link>
 

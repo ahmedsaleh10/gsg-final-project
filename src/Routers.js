@@ -10,6 +10,7 @@ import Layout from "./Pages/Layout";
 import LoginPage from "./Pages/LoginPage";
 import SignUpPage from "./Pages/SignUpPage";
 import AuthUserContext from "./contexts/AuthUserContext";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 const Routing = () => {
   const auth = useContext(AuthUserContext);
@@ -32,7 +33,7 @@ const Routing = () => {
             <></>
           }
 
-          <Route path="*" element={<>not found</>} />
+          <Route path="*" element={<NotFoundPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
