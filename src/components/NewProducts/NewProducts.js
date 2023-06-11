@@ -16,12 +16,13 @@ const NewProducts = ({ products }) => {
 
   return (
     <div id='Swiper' className={classes.sliderContainer}>
+        <img src="/images/winter massive.png" alt="winter collection" className={classes.newProductsImage}/>
         <Stack direction={{xs:'column',lg:'row'}} alignItems={'center'}>
             <Typography variant="subtitle1" className={classes.containerTitle} textAlign={'center'}> New Products </Typography>
             <Stack direction={{xs:'column',sm:"row"}} spacing={{xs:2}} className={classes.buttonStack}>
-                <button onClick={()=> {setProductArray(unSaleProduct); setActiveButton("All")}} className={activeButton === "All" && classes.activeButton}>All</button>
-                <button onClick={()=> {setProductArray(unSaleProduct.filter((product)=> product.category === `men's clothing`)); setActiveButton("Shop Men's")}} className={activeButton === "Shop Men's" && classes.activeButton}>Shop Men's</button>
-                <button onClick={()=> {setProductArray(unSaleProduct.filter((product)=> product.category === `women's clothing`)); setActiveButton("Shop Women's")}} className={activeButton === "Shop Women's" && classes.activeButton}> Shop Women's</button>
+                <button onClick={()=> {setProductArray(unSaleProduct); setActiveButton("All")}} className={activeButton === "All" ? classes.activeButton : ""}>All</button>
+                <button onClick={()=> {setProductArray(unSaleProduct.filter((product)=> product.category === `men's clothing`)); setActiveButton("Shop Men's")}} className={activeButton === "Shop Men's" ? classes.activeButton :""}>Shop Men's</button>
+                <button onClick={()=> {setProductArray(unSaleProduct.filter((product)=> product.category === `women's clothing`)); setActiveButton("Shop Women's")}} className={activeButton === "Shop Women's" ? classes.activeButton :""}> Shop Women's</button>
             </Stack>
         </Stack>
         <Swiper
