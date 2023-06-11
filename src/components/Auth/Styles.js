@@ -35,7 +35,8 @@ const useStyles=createUseStyles({
             color:theme.palette.common.white,
             backgroundColor:theme.palette.primary.dark,
             border:'none',
-            borderRadius:'10px'
+            borderRadius:'10px',
+            cursor:'pointer'
         }
     },
     alertMessage:{
@@ -44,6 +45,9 @@ const useStyles=createUseStyles({
         textAlign:"center",
         marginTop:"2rem",
     },
+    logInLink:{
+        cursor:'pointer'
+    }
 })
 
 export default useStyles

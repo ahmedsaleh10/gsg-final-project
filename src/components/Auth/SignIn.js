@@ -31,7 +31,7 @@ const SignIn = () => {
                 <input type='password' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value) } />
                 <Stack spacing={3} className={classes.logInButtonStack} alignItems={{xs:'center',md:'flex-start'}}>
                     <button type='submit'>Log In</button>
-                    <Link onClick={()=>{navigate('/signUp')}}>You don't have an account?</Link> 
+                    <Link className={classes.logInLink} onClick={()=>{navigate('/signUp')}}>You don't have an account?</Link> 
                 </Stack>
                 
             </form>
