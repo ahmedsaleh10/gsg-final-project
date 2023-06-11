@@ -2,7 +2,7 @@
 # E-commerce
 
 
-This is a collaborative React project that we built for training, where I converted E-commerce website designs into Reactjs components using Material UI.
+This is a collaborative Final React project that we built for training, where I converted E-commerce website designs into Reactjs components using Material UI.
 
 ## Prerequisites
 HTML
