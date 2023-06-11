@@ -1,37 +1,22 @@
-import React, { useContext,useEffect,useState } from "react";
+import React, { useContext } from "react";
 import ProductContext from "../contexts/ProductsContext";
 import Loading from "../components/LoadingProducts/Loading";
 import BestSales from "../components/BestSales/BestSales";
 import NewProducts from "../components/NewProducts/NewProducts";
-import { onAuthStateChanged,signOut } from "firebase/auth"
+import { signOut } from "firebase/auth"
 import {auth} from "../firebase"
 import { useNavigate } from "react-router-dom";
 import Features from "../components/Features/Features";
 
 const HomePage = () => {
   const products = useContext(ProductContext);
-  const [authUser,setAuthUser]= useState(null)
   const navigate = useNavigate()
   const userSignOut = () =>{
       signOut(auth)
       navigate('/')
   }
 
-  useEffect(()=>{
-    const listen = onAuthStateChanged(auth,(user)=>{
-        if(user){
-            setAuthUser(user)
-        }
-        else{
-            setAuthUser(null)
-        }
-    })
-    return()=>{
-        listen()
-    }
-},[])
-
-  return( products && authUser ?
+  return( products ?
    <>
     <NewProducts products={products}/>
     <Features/>

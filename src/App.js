@@ -5,19 +5,23 @@ import ProductsProvider from './providers/ProductsProvider';
 import Routing from './Routers';
 import FavouriteProvider from './providers/FavouriteProvider';
 import CartProvider from './providers/CartProvider';
+import AuthUserProvider from './providers/AuthUserProvider';
 
 function App() {
 
   return (
-    <ProductsProvider>
-      <FavouriteProvider>
-        <CartProvider>
-          <ThemeProvider theme={theme}>
-            <Routing/>
-          </ThemeProvider>
-        </CartProvider>
-      </FavouriteProvider>
-    </ProductsProvider>
+    <AuthUserProvider>
+      <ProductsProvider>
+        <FavouriteProvider>
+          <CartProvider>
+            <ThemeProvider theme={theme}>
+              <Routing/>
+            </ThemeProvider>
+          </CartProvider>
+        </FavouriteProvider>
+      </ProductsProvider>
+    </AuthUserProvider>
+    
   );
 }
 
