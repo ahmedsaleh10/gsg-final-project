@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-commerce
 
-## Available Scripts
 
-In the project directory, you can run:
+This is a collaborative React project that we built for training, where I converted E-commerce website designs into Reactjs components using Material UI.
 
-### `npm start`
+## Prerequisites
+HTML
+JSS (Javascript Styling)
+Java Script/Reactjs Basics
+Git & github
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+1.Clone the repo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  git clone https://github.com/ahmedsaleh10/E-commerce.git
+```
+2.Install NPM packages
+```bash
+  npm install
+```
 
-### `npm test`
+## Usage/Examples
+1.Start the development server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+```javascript
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+2.Open your browser and go to http://localhost:3000 to see the app running.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app can be deployed on various hosting platforms like Heroku, Netlify, or Firebase. You can use this link:
 
-### `npm run eject`
+## Collaborators
+-Ahmad Saleh (GitHub username:ahmedsaleh10)
+-Sora Abu Naser (Code Reviewer)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
+React
+Material UI
+JSS
+Git
+GitHub
+## Acknowledgements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I would like to thank Gaza Sky Geeks for giving me the opportunity to work on this project. We would also like to thank the Material UI team for providing such a great library of components and styles that made our work easier and more efficient.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Benefits of Collaborating on a React Project as a Team (Developer & Code Reviewer)
+Working on a collaborative React project as a team can lead to increased knowledge, efficiency, communication, learning opportunities, and accountability. These benefits can help to make the project more successful and enjoyable for everyone involved.
