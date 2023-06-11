@@ -18,7 +18,7 @@ const SignUp = () => {
         .then(() => {
             setEmail('')
             setPassword('')
-            navigate("/home")
+            navigate("/")
         })
         .catch((error)=>setError(error.message))
     }
@@ -31,7 +31,7 @@ const SignUp = () => {
                 <input type='password' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value) } />
                 <Stack spacing={3} className={classes.logInButtonStack} alignItems={{xs:'center',md:'flex-start'}}>
                     <button type='submit'>Sign Up</button>
-                    <Link className={classes.logInLink} onClick={()=>{navigate('/')}}>Go to Login Page</Link>
+                    <Link className={classes.logInLink} onClick={()=>{navigate('/login')}}>Go to Login Page</Link>
                 </Stack>
                 
             </form>

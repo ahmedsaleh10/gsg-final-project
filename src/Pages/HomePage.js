@@ -17,7 +17,7 @@ const HomePage = () => {
   const classes = useStyles()
   const userSignOut = () =>{
       signOut(auth)
-      navigate('/')
+      navigate('/login')
   }
 
   return( products ?
@@ -25,7 +25,7 @@ const HomePage = () => {
     <NewProducts products={products}/>
     <Features/>
     <BestSales products={products} />
-    {authUser ? <center><button onClick={userSignOut} className={classes.signButton}>Log Out</button></center> : <center> <button onClick={()=>{navigate('/')}} className={classes.signButton} >Sign In</button> </center>}
+    {authUser ? <center><button onClick={userSignOut} className={classes.signButton}>Log Out</button></center> : <center> <button onClick={()=>{navigate('/login')}} className={classes.signButton} >Sign In</button> </center>}
    </> : <Loading />)
 };
 

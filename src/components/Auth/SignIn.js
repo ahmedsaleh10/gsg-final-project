@@ -16,7 +16,7 @@ const SignIn = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth,email,password)
         .then(() => {
-            navigate('/home')
+            navigate('/')
         })
         .catch((error)=> setError(error.message))
         setEmail('')
