@@ -6,8 +6,11 @@ This is a collaborative Final React project that we built for training, where I 
 
 ## Prerequisites
 HTML
+
 JSS (Javascript Styling)
+
 Java Script/Reactjs Basics
+
 Git & github
 
 ## Installation
@@ -37,6 +40,7 @@ This app can be deployed on various hosting platforms like Heroku, Netlify, or F
 
 ## Collaborators
 -Ahmad Saleh (GitHub username:ahmedsaleh10)
+
 -Sora Abu Naser (Code Reviewer)
 
 ## Technologies Used
