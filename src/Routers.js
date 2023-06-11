@@ -7,13 +7,17 @@ import WomenPage from './Pages/WomenPage'
 import FavouritePage from './Pages/FavouritePage'
 import CartPage from './Pages/CartPage'
 import Layout from './Pages/Layout'
+import LoginPage from './Pages/LoginPage'
+import SignUpPage from "./Pages/SignUpPage"
 
 const Routing = () => {
   return (
     <BrowserRouter>
         <Routes>
             <Route element={<Layout/>}>
-              <Route index element={<HomePage/>}/>
+              <Route index element={<LoginPage/>}/>
+              <Route path='/signUp' element={<SignUpPage/>}/>
+              <Route path='/home' element={<HomePage/>}/>
               <Route path='/products/:id' element={<ProductDetailsPage/>}/>
               <Route path='/men' element={<MenPage/>}/>
               <Route path='/women' element={<WomenPage/>}/>

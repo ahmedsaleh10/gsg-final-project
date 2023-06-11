@@ -39,6 +39,13 @@ const useStyles = createUseStyles({
     activeButton:{
         backgroundColor:theme.palette.primary.dark,
         color:theme.palette.common.white,
+    },
+    newProductsImage:{
+        width:'100%',
+        paddingBottom:'2.5rem',
+        [theme.breakpoints.down('lg')]:{
+            paddingBottom:'0'
+        }
     }
 
 })
