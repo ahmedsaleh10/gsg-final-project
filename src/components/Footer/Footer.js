@@ -6,7 +6,7 @@ import FooterHeader from './FooterHeader'
 const Footer = () => {
   const classes =useStyles()
   return (
-    <footer className={classes.MainFooter}>
+    <footer className={classes.mainFooter}>
         <FooterHeader/>
         <FooterBody/>
     </footer>

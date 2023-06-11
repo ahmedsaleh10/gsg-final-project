@@ -7,11 +7,11 @@ import SendButton from "./SendButton";
 const FooterHeader = () => {
   const classes = useStyles();
   return (
-    <div className={classes.FooterHeader}>
-      <Typography variant="subtitle1" className={classes.HeaderTitle}>
+    <div className={classes.footerHeader}>
+      <Typography variant="subtitle1" className={classes.headerTitle}>
         <span>Clearence Sales </span>Up to 70% off. All Sales are Final!
       </Typography>
-      <div className={classes.SearchField}>
+      <div className={classes.searchField}>
         <SearchField>
           <StyledInputBase
             placeholder="Enter Your Email"

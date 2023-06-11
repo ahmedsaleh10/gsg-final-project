@@ -2,24 +2,24 @@ import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 
 const useStyles = createUseStyles({
-    Container:{
+    container:{
         padding:"0 8rem",
         [theme.breakpoints.down("lg")]:{
             padding:"0 2rem"
         },
     },
-    GridItem1:{
+    gridItem1:{
         paddingTop:'2rem',
         
     },
-    GridItem2:{
+    gridItem2:{
         paddingTop:'2rem',
         paddingLeft:'4rem',
         [theme.breakpoints.down('md')]:{
             paddingLeft:'0'
         },
     },
-    Rating:{
+    rating:{
         '& span':{
            '& span':{
             '& span':{
@@ -32,14 +32,14 @@ const useStyles = createUseStyles({
         }
         
     },
-    InformationContainer:{
+    informationContainer:{
         paddingBottom:'1.7rem',
         borderBottom:'2px solid #d5cccc'
     },
-    OptionsContainer:{
+    optionsContainer:{
         padding:'2rem 0'
     },
-    SizeSelectedButton:{
+    sizeSelectedButton:{
         border: "2px solid gray",
         borderRadius: "50%",
         padding: "3px 2px",
@@ -49,7 +49,7 @@ const useStyles = createUseStyles({
         backgroundColor: theme.palette.secondary.dark,
         cursor:'pointer'
     },
-    SizeUnselectedButton:{
+    sizeUnselectedButton:{
         border: "2px solid gray",
         borderRadius: "50%",
         padding: "3px 2px",
@@ -59,14 +59,14 @@ const useStyles = createUseStyles({
         backgroundColor: theme.palette.background.main,
         cursor:'pointer'
     },
-    ButtonsForNumberOfItems:{
+    buttonsForNumberOfItems:{
         border:'2px solid gray',
         borderRadius:'50%',
         width:'50px',
         height:'50px',
         cursor:'pointer',
     },
-    CartButton:{
+    cartButton:{
         backgroundColor:theme.palette.primary.dark,
         color:theme.palette.common.white,
         fontFamily:'Poppins',
@@ -81,7 +81,7 @@ const useStyles = createUseStyles({
         fontSize:'1rem',
         cursor:'pointer'
     },
-    FavoriteIcon:{
+    favoriteIcon:{
         backgroundColor:theme.palette.common.white,
         width:'60px',
         '& svg':{
@@ -91,11 +91,11 @@ const useStyles = createUseStyles({
         },
         cursor:'pointer'
     },
-    FeaturesButton:{
+    featuresButton:{
         fontSize: "2.5rem",
         paddingRight: "1.5rem"
     },
-    BuyingFeaturesContainer:{
+    buyingFeaturesContainer:{
         border: "0.5px solid black",
         padding: "1rem 0rem",
         borderRadius: "4px",

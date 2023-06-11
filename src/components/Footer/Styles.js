@@ -33,15 +33,15 @@ export const SearchField = styled(Box)(({ theme }) => ({
   }));  
 
 const useStyles= createUseStyles({
-    Image:{
+    image:{
         display:"block",
         marginBottom:"2rem",
     },
-    Description:{
+    description:{
         color:theme.palette.text,
         marginBottom:"1rem"
     },
-    GridBody:{
+    gridBody:{
         width:"100%",
         margin:"0",
         padding:"0 8rem",
@@ -52,24 +52,24 @@ const useStyles= createUseStyles({
         },
         paddingBottom:"5rem",
     },
-    Icons:{
+    icons:{
         '& .MuiSvgIcon-root':{
             color:theme.palette.common.white,
         }
     },
-    Title:{
+    title:{
         display:"block",
         color:theme.palette.title,
         marginBottom:"3.8rem",
     },
-    Container:{
+    container:{
         paddingTop:"4rem",
     },
-    Divider:{
+    divider:{
         borderWidth:"0.1rem",
         borderColor:"#f0f0f033",
     },
-    FooterBottom:{
+    footerBottom:{
         padding:"2.5rem 8rem",
         [theme.breakpoints.down("lg")]:{
             padding:"3rem 2rem",
@@ -79,10 +79,10 @@ const useStyles= createUseStyles({
             alignItems:"flex-start"
         },
     },
-    MainFooter:{
+    mainFooter:{
         backgroundColor:theme.palette.background.dark,
     },
-    HeaderTitle:{
+    headerTitle:{
         color:theme.palette.title,
         textAlign:'center',
         lineHeight:"1.3",
@@ -95,7 +95,7 @@ const useStyles= createUseStyles({
                 textAlign:"left"
         },
     },
-    SendButton:{
+    sendButton:{
         padding:"1.2rem 4rem",
         backgroundColor:theme.palette.primary.main,
         fontSize:"1.3rem",
@@ -106,7 +106,7 @@ const useStyles= createUseStyles({
         }
 
     },
-    FooterHeader:{
+    footerHeader:{
         padding:"0 8rem",
         [theme.breakpoints.down("lg")]:{
             padding:"0rem 2rem",            

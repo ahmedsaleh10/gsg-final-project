@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import theme from "../../theme";
 const useStyles = createUseStyles({
-    SwiperContainer:{
+    swiperContainer:{
         paddingBottom:"6rem",
         margin :"0 8rem",
         overflow:'hidden',
@@ -11,28 +11,28 @@ const useStyles = createUseStyles({
             paddingBottom:'10rem'
         }
     },
-    CustomSwiper:{
+    customSwiper:{
         overflow:'visible',
     },
-    ButtonContainer:{
+    buttonContainer:{
         padding:'0 8rem',
         [theme.breakpoints.down('lg')]:{
             padding:'0 2rem'
         },
     },
-    Filter:{
+    filter:{
         paddingRight:'2rem',
         fontSize:'1.2rem',
         cursor:'pointer'
     },
-    ActiveFilter:{
+    activeFilter:{
         color:'#1a2a3c',
         fontWeight:'700',
         paddingRight:'2rem',
         fontSize:'1.2rem',
         cursor:'pointer'
     },
-    MenPageImage:{
+    menPageImage:{
         padding:'3rem 0',
         [theme.breakpoints.down('md')]:{
             padding:'2rem 0'

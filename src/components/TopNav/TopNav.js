@@ -19,10 +19,12 @@ import {
   Stack,
   } from "@mui/material";
 import { useNavigate } from "react-router";
-import FavouriteContext from "../../contexts/FavouriteContext";
+import FavouriteContext from "../../contexts/FavouritesContext";
+import CartContext from "../../contexts/CartContext";
   
 const TopNav = () => {
-  const Favourite = useContext(FavouriteContext)
+  const favourite = useContext(FavouriteContext)
+  const cart = useContext(CartContext)
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
@@ -48,14 +50,14 @@ const TopNav = () => {
   };
 
   return (
-    <AppBar className={classes.AppBar}>
+    <AppBar className={classes.appBar}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters className={classes.Toolbar}>
+        <Toolbar disableGutters className={classes.toolbar}>
             <IconButton
               size="large"
               aria-controls="menu-appbar"
               onClick={handleOpenNavMenu}
-              className={classes.BurgerdIcon}
+              className={classes.burgerdIcon}
             >
               <MenuIcon  />
             </IconButton>
@@ -73,7 +75,7 @@ const TopNav = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              className={classes.BurgerdIcon}
+              className={classes.burgerdIcon}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -83,7 +85,7 @@ const TopNav = () => {
                       page === 'Home' ? navigate('/') : navigate(`/${page}`)
                     }}
                     className={
-                      activePage === page ? classes.ActivePage : classes.Pages
+                      activePage === page ? classes.activePage : classes.pages
                     }
                   >
                     {page}
@@ -100,7 +102,7 @@ const TopNav = () => {
               <Link
                 variant="body1"
                 className={
-                  activePage === page ? classes.ActivePage : classes.Pages
+                  activePage === page ? classes.activePage : classes.pages
                 }
                 key={page}
                 onClick={() => {
@@ -116,29 +118,29 @@ const TopNav = () => {
             <Stack spacing={2.5} direction="row">
               <Link onClick={()=> navigate('/favourite')}>
                 <Badge
-                  badgeContent={Favourite.badgeNumber}
+                  badgeContent={favourite.badgeNumber}
                   showZero
-                  className={classes.Badge}
+                  className={classes.badge}
                   max={99}
                 >
                   <FavoriteOutlinedIcon />
                 </Badge>
               </Link>
-              <Link>
+              <Link onClick={()=> navigate('/cart')}>
                 <Badge
-                  badgeContent={0}
+                  badgeContent={cart.badgeNumber}
                   showZero
-                  className={classes.Badge}
+                  className={classes.badge}
                   max={99}
                 >
                   <ShoppingCartOutlinedIcon />
                 </Badge>
               </Link>
-              <Stack className={classes.BurgerdIcon}>
+              <Stack className={classes.burgerdIcon}>
                 <IconButton onClick={handleClick}>
                   <SearchIcon
                     fontSize="large"
-                    className={classes.BurgerdIcon}
+                    className={classes.burgerdIcon}
                   />
                 </IconButton>
               </Stack>
@@ -147,12 +149,12 @@ const TopNav = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem className={classes.MenuItem}>
+                <MenuItem className={classes.menuItem}>
                   <Search />
                 </MenuItem>
               </SearchMenu>
             </Stack>
-            <Stack className={classes.SearchField}>
+            <Stack className={classes.searchField}>
               <Search />
             </Stack>
           </Stack>

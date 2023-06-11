@@ -38,14 +38,14 @@ const  ProductsPage = ({products}) => {
   return (
     <>
       <div>
-        <img src='/images/winter massive.png' alt='winter massive' width={'100%'} className={classes.MenPageImage} />
+        <img src='/images/winter massive.png' alt='winter massive' width={'100%'} className={classes.menPageImage} />
       </div>
-      <Stack className={classes.ButtonContainer} direction={'row'}  >
-        <Typography className={activeFilter === 'All'? classes.ActiveFilter: classes.Filter} variant='body1' onClick={handleAllProducts}>All</Typography>
-        <Typography className={activeFilter === 'Summer'? classes.ActiveFilter: classes.Filter} variant='body1' onClick={handleSummerProducts}>Summer</Typography>
-        <Typography className={activeFilter === 'Winter'? classes.ActiveFilter: classes.Filter} variant='body1' onClick={handleWinterProducts}>Winter</Typography>
+      <Stack className={classes.buttonContainer} direction={'row'}  >
+        <Typography className={activeFilter === 'All'? classes.activeFilter: classes.filter} variant='body1' onClick={handleAllProducts}>All</Typography>
+        <Typography className={activeFilter === 'Summer'? classes.activeFilter: classes.filter} variant='body1' onClick={handleSummerProducts}>Summer</Typography>
+        <Typography className={activeFilter === 'Winter'? classes.activeFilter: classes.filter} variant='body1' onClick={handleWinterProducts}>Winter</Typography>
       </Stack>
-      <div id='Swiper' className={classes.SwiperContainer} >
+      <div id='Swiper' className={classes.swiperContainer} >
       <Swiper
       slidesPerView={3}
       slidesPerGroupSkip={1}
@@ -78,7 +78,7 @@ const  ProductsPage = ({products}) => {
       spaceBetween={30}
       pagination={pagination}
       modules={[Grid, Pagination]}
-      className={classes.CustomSwiper}
+      className={classes.customSwiper}
       >
         {menProducts?.map((product,index) => {
           return(

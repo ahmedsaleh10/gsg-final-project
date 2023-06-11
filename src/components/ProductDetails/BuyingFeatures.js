@@ -7,13 +7,13 @@ import useStyles from "./Styles";
 const BuyingFeatures = () => {
   const classes = useStyles();
   return (
-    <div className={classes.BuyingFeaturesContainer}>
+    <div className={classes.buyingFeaturesContainer}>
       <Stack
         flexDirection={"row"}
         alignItems={"center"}
         padding={"0rem 1.5rem 0.5rem 1.5rem"}
       >
-        <LocalShippingOutlinedIcon className={classes.FeaturesButton} />
+        <LocalShippingOutlinedIcon className={classes.featuresButton} />
         <div>
           <Typography children={"Free Delivery"} variant="body1" />
           <Typography
@@ -29,7 +29,7 @@ const BuyingFeatures = () => {
         alignItems={"center"}
         sx={{ padding: "1rem 1.5rem 0.5rem 1.5rem" }}
       >
-        <CachedIcon className={classes.FeaturesButton} />
+        <CachedIcon className={classes.featuresButton} />
         <div>
           <Typography children={"Return Delivery"} variant="body1" />
           <Typography

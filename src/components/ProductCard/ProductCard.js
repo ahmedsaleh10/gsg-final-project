@@ -7,10 +7,12 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useNavigate } from "react-router";
-import FavouriteContext from "../../contexts/FavouriteContext";
+import FavouritesContext from "../../contexts/FavouritesContext";
+import CartContext from "../../contexts/CartContext";
 
 const ProductCard = ({ product }) => {
-  const Favourite = useContext(FavouriteContext)
+  const favourite = useContext(FavouritesContext)
+  const cart = useContext(CartContext)
   const classes = useStyles();
   const number =parseInt((100 * product.price) / (100 - 100 * product.salePercantage))
   const navigate = useNavigate();
@@ -19,21 +21,20 @@ const ProductCard = ({ product }) => {
   }
 
   return (
-    <div className={classes.CardContainer}>
-      <Link className={classes.Link}>
-        <div className={classes.Buttons}>
-          {/* each button should do some actions */}
-          <IconButton className={classes.IconButton} onClick={()=>Favourite.handleFavoriteButton(product)}>
+    <div className={classes.cardContainer}>
+      <Link className={classes.link}>
+        <div className={classes.buttons}>
+          <IconButton className={classes.iconButton} onClick={() => favourite.handleFavoriteButton(product)}>
             <FavoriteBorderIcon />
           </IconButton>
-          <IconButton className={classes.IconButton}>
+          <IconButton className={classes.iconButton} onClick={() => cart.handleCartButton(product)}>
             <ShoppingCartIcon />
           </IconButton>
-          <IconButton className={classes.IconButton} onClick={handleProductDetails}>
+          <IconButton className={classes.iconButton} onClick={handleProductDetails}>
             <VisibilityIcon />
           </IconButton>
         </div>
-        <img src={product.image} className={classes.CardImage} alt="img" />
+        <img src={product.image} className={classes.cardImage} alt="img" />
       </Link>
 
       {product.sale ? (
@@ -43,7 +44,7 @@ const ProductCard = ({ product }) => {
           justifyContent={"flex-start"}
           spacing={3}
         >
-          <Typography variant="body2" className={classes.DeletedPrice}>
+          <Typography variant="body2" className={classes.deletedPrice}>
             ${number.toFixed(2)}
           </Typography>
           <Typography variant="body2"> ${product.price} </Typography>
@@ -53,7 +54,7 @@ const ProductCard = ({ product }) => {
           direction={"row"}
           justifyContent={"space-between"}
           alignItems={"center"}
-          className={classes.Details}
+          className={classes.details}
         >
           <Typography variant="body2"> ${product.price} </Typography>
           <Rating
@@ -64,7 +65,7 @@ const ProductCard = ({ product }) => {
           />
         </Stack>
       }
-      <Typography variant="body1" className={classes.ProductTitle}>
+      <Typography variant="body1" className={classes.productTitle}>
         {product.title}
       </Typography>
     </div>

@@ -3,22 +3,22 @@ import WishProduct from "./WishProduct";
 import useStyles from "./Styles";
 import CancelPresentationSharpIcon from "@mui/icons-material/CancelPresentationSharp";
 import { IconButton, Stack, Typography } from "@mui/material";
-const WishList = ({ Products, deleteHandler }) => {
+const WishList = ({ products, deleteHandler }) => {
   const classes = useStyles();
-  const [WishProducts, setWishProducts] = useState(Products);
+  const [wishProducts, setWishProducts] = useState(products);
   const handleDeletItem = (productId) => {
-    const newProductsArr = WishProducts.filter(
+    const newProductsArr = wishProducts.filter(
       (product) => product.id !== productId
     );
     setWishProducts(newProductsArr);
   };
 
   return (
-    <div className={classes.WishListContainer}>
+    <div className={classes.container}>
       <Typography variant="subtitle1" textAlign={"center"} my={3}>
         Wish List Products
       </Typography>
-      {WishProducts?.map((product, index) => {
+      {wishProducts?.map((product, index) => {
         return (
           <Stack
             key={index}

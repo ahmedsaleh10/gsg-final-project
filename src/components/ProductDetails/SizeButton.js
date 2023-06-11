@@ -8,7 +8,7 @@ const SizeButton = ({content,selected,onClick}) => {
   };
 
   return (
-    <button onClick={handleOnClick} className={selected ? classes.SizeSelectedButton : classes.SizeUnselectedButton}>
+    <button onClick={handleOnClick} className={selected ? classes.sizeSelectedButton : classes.sizeUnselectedButton}>
       {content}
     </button>
   )

@@ -8,7 +8,7 @@ const Options = () => {
     const options =["In Stock", "Free Shipping Available","Prama Code"]
     const classes = useStyles()
   return (
-    <div className={classes.OptionsContainer}>
+    <div className={classes.optionsContainer}>
         {options.map((option,index) => {
             return(
                 <Stack direction={'row'} spacing={1.5} pb={1.5} key={index}>

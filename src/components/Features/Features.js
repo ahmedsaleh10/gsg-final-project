@@ -10,17 +10,17 @@ import useStyles from './Styles';
 const Features = () => {
     const classes=useStyles()
   return (
-    <Grid container spacing={1} columns={12} className={classes.FeaturesContainer}>
-        <Grid item className={classes.GridItem} xs={6} lg={3}>
+    <Grid container spacing={1} columns={12} className={classes.featuresContainer}>
+        <Grid item className={classes.gridItem} xs={6} lg={3}>
             <Feature icon={<LocalShippingOutlinedIcon color='error'/>} title={"Free Shipping"} description={"an orders over $49.00"}/>
         </Grid>
-        <Grid item className={classes.GridItem} xs={6} lg={3}>
+        <Grid item className={classes.gridItem} xs={6} lg={3}>
             <Feature icon={<WatchOutlinedIcon color='error'/>} title={"24/7 Help Center"} description={"support online 24hours"}/> 
         </Grid>
-        <Grid item className={classes.GridItem} xs={6} lg={3}>
+        <Grid item className={classes.gridItem} xs={6} lg={3}>
          <Feature icon={<CardGiftcardOutlinedIcon color='error'/>} title={"Gift Promotion"} description={"an orders over $49.00"}/>
         </Grid>
-        <Grid item className={classes.GridItem} xs={6} lg={3}>
+        <Grid item className={classes.gridItem} xs={6} lg={3}>
          <Feature icon={<AttachMoneyOutlinedIcon color='error'/>} title={"Money Gurantee"} description={"15 days money back"}/>
         </Grid>
     </Grid>
