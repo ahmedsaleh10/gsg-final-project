@@ -26,7 +26,7 @@ const SignUp = () => {
     <div className={classes.formContainer}>
         <Typography variant='subtitle1' textAlign={'center'}>Create Account</Typography>
         <Stack direction={'row'} justifyContent={'center'}>
-            <form onSubmit={signUp} className={classes.signInForm} autoComplete>
+            <form onSubmit={signUp} className={classes.signInForm} autoComplete='true'>
                 <input type='email' placeholder='Enter Your Email' value={email} onChange={(e) => setEmail(e.target.value) } />
                 <input type='password' placeholder='Enter Your Password' value={password} onChange={(e) => setPassword(e.target.value) } />
                 <Stack spacing={3} className={classes.logInButtonStack} alignItems={{xs:'center',md:'flex-start'}}>
