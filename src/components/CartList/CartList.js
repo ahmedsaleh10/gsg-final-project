@@ -37,7 +37,7 @@ const CartList = ({ products, deleteHandler }) => {
   
   const handleDecrementDemandItem = (id)=>{
     const newCartListProducts = cartListProducts.map((item) => {
-      if(item.product.id === id){
+      if(item.product.id === id && item.numberOfProductDemand > 0){
         item.numberOfProductDemand -= 1
       }
       return({...item})
