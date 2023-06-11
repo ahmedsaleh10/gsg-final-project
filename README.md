@@ -45,10 +45,15 @@ This app can be deployed on various hosting platforms like Heroku, Netlify, or F
 
 ## Technologies Used
 React
+
 Material UI
+
 JSS
+
 Git
+
 GitHub
+
 ## Acknowledgements
 
 I would like to thank Gaza Sky Geeks for giving me the opportunity to work on this project. We would also like to thank the Material UI team for providing such a great library of components and styles that made our work easier and more efficient.
