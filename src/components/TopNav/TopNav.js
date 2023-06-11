@@ -28,6 +28,7 @@ const TopNav = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [activePage, setActivePage] = useState(window.location.pathname.substring(1));
+  activePage === "" && setActivePage("Home")
   const navigate = useNavigate()
   const classes = useStyles();
 
@@ -81,7 +82,7 @@ const TopNav = () => {
                   <Link
                     onClick={() => {
                       setActivePage(page)
-                      navigate(`/${page}`)
+                      page === "Home" ? navigate("/") : navigate(`/${page}`)
                     }}
                     className={
                       activePage === page ? classes.activePage : classes.pages
@@ -106,7 +107,7 @@ const TopNav = () => {
                 key={page}
                 onClick={() => {
                   setActivePage(page)
-                  navigate(`/${page}`)
+                  page === "Home" ? navigate("/") : navigate(`/${page}`)
                 }}
               >
                 {page}

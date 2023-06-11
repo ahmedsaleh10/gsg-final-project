@@ -18,9 +18,9 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<LoginPage />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="/signUp" element={<SignUpPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           {auth ? 
             <>
               <Route path="/products/:id" element={<ProductDetailsPage />} />

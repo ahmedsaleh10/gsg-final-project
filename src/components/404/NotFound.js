@@ -10,7 +10,7 @@ const NotFound = () => {
   return (
     <Stack textAlign={"center"} spacing={4} py={{xs:5,md:15}} px={{xs:4,md:10}} alignItems={'center'}>
         <Typography variant='h1' color={theme.palette.primary.dark}> 404 not founded Page &#128528;</Typography>
-        <button className={classes.signButton} onClick={() => {navigate('/home')}}>Go to Home Page</button>
+        <button className={classes.signButton} onClick={() => {navigate('/')}}>Go to Home Page</button>
     </Stack>
   )
 }
