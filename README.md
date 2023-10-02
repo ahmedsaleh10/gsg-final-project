@@ -34,9 +34,50 @@ npm start
 ```
 2.Open your browser and go to http://localhost:3000 to see the app running.
 
-## Deployment
+## Features 
 
-This app can be deployed on various hosting platforms like Heroku, Netlify, or Firebase. You can use this link:
+### Login and Sign up using firebase.
+
+![image](./public/images/Login.png)
+
+
+![image](./public/images/SignUp.png)
+
+
+
+
+### In home page you can browse a best sales products an so on.
+
+![image](./public/images/Home.png)
+
+
+
+
+### You can browse a men's clothes and women's clothes in each tab.
+
+#### As you can see you can filter summer and winter clothes.
+
+![image](./public/images/Men.png)
+
+
+![image](./public/images/Women.png)
+
+
+
+
+### Product details page
+
+![image](./public/images/Product%20Page.png)
+
+
+
+
+### Wish list and Cart pages
+
+![image](./public/images/WishList.png)
+
+
+
 
 ## Collaborators
 -Ahmad Saleh (GitHub username:ahmedsaleh10)
